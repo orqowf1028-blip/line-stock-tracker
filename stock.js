@@ -1,7 +1,7 @@
 const $ = selector => document.querySelector(selector);
 let code = new URLSearchParams(location.search).get('code') || '';
 const NS = 'http://www.w3.org/2000/svg';
-const RANGE_LABELS = { '6m': '近 6 個月', '1y': '近 1 年', '3y': '近 3 年', '5y': '近 5 年' };
+const RANGE_LABELS = { '2m': '近 2 個月', '3m': '近 3 個月', '6m': '近 6 個月', '1y': '近 1 年', '3y': '近 3 年', '5y': '近 5 年' };
 let currentRange = RANGE_LABELS[new URLSearchParams(location.search).get('range')] ? new URLSearchParams(location.search).get('range') : '6m';
 const TRACKER_SIGNALS = window.LINE_TRACKER_SIGNALS || [];
 const fmt = (value, digits = 2) => Number.isFinite(Number(value)) ? Number(value).toLocaleString('zh-TW', { maximumFractionDigits: digits, minimumFractionDigits: digits }) : '—';
@@ -74,7 +74,7 @@ function latestPair(points, key) {
   return [values.at(-1)?.[key], values.at(-2)?.[key]];
 }
 
-function drawKline(candles, institutions = []) {
+function drawKline(candles, institutions = [], holdings = []) {
   const chart = $('#kline'); clear(chart);
   if (!candles.length) { chart.append(svg('text', { x: 380, y: 180, fill: '#9cb3c6', 'text-anchor': 'middle' }, '暫無日K資料')); return; }
   const data = candles, width = 760, plotLeft = 128, plotRight = 718, priceTop = 42, priceBottom = 245, volumeTop = 286, volumeBottom = 360;
@@ -90,14 +90,27 @@ function drawKline(candles, institutions = []) {
   ];
   const volumeMa5 = movingAverage(volumes, 5), volumeMa10 = movingAverage(volumes, 10);
 
-  // A price-by-volume proxy. Official data does not expose the true account
-  // class at each execution price, so institutional net volume is shown as a
-  // transparent "main-force proxy" and the remainder as a retail proxy.
+  // A price-by-volume activity proxy. Official data does not expose account
+  // classes at each execution price. Weight daily volume by the latest TDCC
+  // large-holder snapshot at or before that date, then use institutional net
+  // activity as a floor. The remainder is the retail-side proxy.
   const byDate = new Map(institutions.map(row => [row.date, row])), binCount = 18, binSize = Math.max((rawHigh - rawLow) / binCount, rawHigh * .001);
+  const weeklyHoldings = [...holdings].filter(row => row?.date).sort((a, b) => a.date.localeCompare(b.date));
+  const holdingForDate = date => {
+    let matched = null;
+    for (const snapshot of weeklyHoldings) {
+      if (snapshot.date > date) break;
+      matched = snapshot;
+    }
+    return matched;
+  };
   const profile = Array.from({ length: binCount }, (_, index) => ({ low: rawLow + index * binSize, retail: 0, main: 0 }));
   data.forEach(row => {
     const typical = (Number(row.high) + Number(row.low) + Number(row.close)) / 3, volume = Math.max(Number(row.volume) || 0, 0);
-    const chip = byDate.get(row.date) || {}, main = Math.min(volume, Math.abs(Number(chip.foreign) || 0) + Math.abs(Number(chip.trust) || 0));
+    const chip = byDate.get(row.date) || {}, institutionalRatio = volume ? Math.min((Math.abs(Number(chip.foreign) || 0) + Math.abs(Number(chip.trust) || 0)) / volume, .95) : 0;
+    const snapshot = holdingForDate(row.date), tdccRatioValue = snapshot ? holdingRatio(snapshot, holdingThresholds.large2, 'above', 'large1000') : null;
+    const tdccRatio = finite(tdccRatioValue) === null ? 0 : clamp(Number(tdccRatioValue) / 100, 0, .95);
+    const main = volume * Math.max(tdccRatio, institutionalRatio);
     const index = clamp(Math.floor((typical - rawLow) / binSize), 0, binCount - 1);
     profile[index].main += main; profile[index].retail += Math.max(volume - main, 0);
   });
@@ -252,7 +265,7 @@ function renderHoldings(holdings) {
 }
 function initHoldingControls() {
   const inputs = { retail: $('#retailInput'), large1: $('#large1Input'), large2: $('#large2Input') };
-  Object.entries(inputs).forEach(([key, input]) => { input.value = holdingThresholds[key]; input.addEventListener('change', () => { holdingThresholds[key] = positive(input.value, holdingThresholds[key]); input.value = holdingThresholds[key]; saveHoldingThresholds(); if (studyData) renderHoldings(studyData.holdings || []); }); });
+  Object.entries(inputs).forEach(([key, input]) => { input.value = holdingThresholds[key]; input.addEventListener('change', () => { holdingThresholds[key] = positive(input.value, holdingThresholds[key]); input.value = holdingThresholds[key]; saveHoldingThresholds(); if (studyData) { renderHoldings(studyData.holdings || []); drawKline(studyData.candles || [], studyData.institutions || [], studyData.holdings || []); text('#profileNote', `籌碼峰為結構代理量：以每週 TDCC「≥${holdingThresholds.large2} 張」持股比率套用到相鄰交易日，並以外資＋投信買賣超占成交量作下限；不是逐筆主力帳戶成本。`); } }); });
 }
 
 function alignDaily(candles, institutions) {
@@ -268,12 +281,13 @@ function alignDaily(candles, institutions) {
 function render(data) {
   const candles = data.candles || [], latest = candles.at(-1), previous = candles.at(-2), change = latest && previous ? latest.close - previous.close : null;
   document.title = `${data.name || code}｜個股研究`;
-  text('#name', `${data.name || code}（${code}）`); text('#market', data.market === 'listed' ? '上市' : data.market === 'otc' ? '上櫃' : '資料辨識中');
+  const resolvedName = data.name && data.name !== code ? data.name : '';
+  text('#name', resolvedName ? `${resolvedName}（${code}）` : code); text('#market', data.market === 'listed' ? '上市' : data.market === 'otc' ? '上櫃' : '資料辨識中');
   text('#price', latest ? fmt(latest.close) : '—'); $('#price').className = `price ${change > 0 ? 'up' : change < 0 ? 'down' : 'flat'}`;
   text('#change', change === null ? '—' : `${change >= 0 ? '+' : ''}${fmt(change)} (${previous?.close ? `${(change / previous.close * 100).toFixed(2)}%` : '—'})`); $('#change').className = `tag ${change > 0 ? 'up' : change < 0 ? 'down' : 'flat'}`;
   text('#quoteMeta', latest ? `${latest.date}｜開 ${fmt(latest.open)}｜高 ${fmt(latest.high)}｜低 ${fmt(latest.low)}｜量 ${fmt(latest.volume / 1000, 0)} 張` : '等待官方日行情');
   const sourceNote = data.dataSource ? `｜${data.dataSource}${data.partialHistory ? '（長區間暫以近一年替代）' : ''}` : '';
-  text('#updated', `資料更新：${data.updatedAt || '—'}${sourceNote}`); text('#rangeLabel', `${RANGE_LABELS[currentRange]}・滑鼠十字線對照日期與價位`); drawKline(candles, data.institutions || []);
+  text('#updated', `資料更新：${data.updatedAt || '—'}${sourceNote}`); text('#rangeLabel', `${RANGE_LABELS[currentRange]}・滑鼠十字線對照日期與價位`); drawKline(candles, data.institutions || [], data.holdings || []);
   const daily = alignDaily(candles, data.institutions || []);
   drawDailyBars('#foreign', daily, { key: 'foreign', barLabel: '外資買賣超', barDivisor: 1000, barDigits: 0, lineKey: 'foreignHolding', lineLabel: '外資持股', lineDivisor: 1000, lineDigits: 0, lineColor: '#ffbd59' });
   drawDailyBars('#trust', daily, { key: 'trust', barLabel: '投信買賣超', barDivisor: 1000, barDigits: 0, lineKey: 'trustCumulative', lineLabel: '今年累計變化', lineDivisor: 1000, lineDigits: 0, lineColor: '#71c5ff' });
@@ -287,6 +301,7 @@ function render(data) {
   $('#marginMetrics').innerHTML = metricText('融資(張)', marginBalance, marginBalancePrevious) + metricText('差額(張)', marginDelta, marginDeltaPrevious);
   $('#marginRateMetrics').innerHTML = metricText('融資使用率', marginRate, marginRatePrevious, 1, 2, '%');
   const holders = data.holdings || [], holding = holders.at(-1); text('#holderDate', holding ? `最新資料日 ${holding.date}；每根為該週最後營業日快照` : '每週最後營業日'); renderHoldings(holders);
+  text('#profileNote', `左側籌碼峰是估算：以 TDCC 大戶2（＞${fmt(holdingThresholds.large2, 0)}張）持股比作每日成交量的大戶權重，再與外資＋投信淨額比率擇高；剩餘量列為散戶代理量。這是持股結構加權的活動代理，不是實際帳戶逐價成本。`);
   $('#loading').hidden = true; $('#dashboard').hidden = false;
 }
 function normalizedSymbol(value) { return String(value || '').trim().toLocaleLowerCase('zh-TW').replace(/[\s（）()]/g, ''); }
@@ -327,11 +342,11 @@ async function loadStudy(targetCode, pushHistory = false) {
   code = targetCode; const sequence = ++loadSequence; prepareLoading(code);
   if (pushHistory) { const next = new URL(location.href); next.searchParams.set('code', code); next.searchParams.set('range', currentRange); history.pushState({ code, range: currentRange }, '', next); }
   try {
-    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=5`, { cache: 'no-store' });
+    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=6`, { cache: 'no-store' });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
     if (sequence !== loadSequence) return;
-    studyData = payload; render(payload); $('#symbolInput').value = `${payload.name || code}（${code}）`; text('#symbolStatus', `${payload.name || code}（${code}）已更新完整研究頁`);
+    studyData = payload; render(payload); const resolvedName = payload.name && payload.name !== code ? payload.name : ''; $('#symbolInput').value = resolvedName ? `${resolvedName}（${code}）` : code; text('#symbolStatus', resolvedName ? `${resolvedName}（${code}）已更新完整研究頁` : `${code} 已更新完整研究頁`);
   } catch (cause) { if (sequence === loadSequence) error(`個股研究資料暫時無法完成：${cause.message || cause}`); }
 }
 function setRangeButtons() { document.querySelectorAll('[data-range]').forEach(button => button.classList.toggle('active', button.dataset.range === currentRange)); }

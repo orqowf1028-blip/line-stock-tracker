@@ -15,7 +15,7 @@ const isoDate = value => {
   return `${Number(parts[1]) + 1911}-${String(parts[2]).padStart(2, '0')}-${String(parts[3]).padStart(2, '0')}`;
 };
 const ymd = value => String(value || '').replaceAll('-', '');
-const RANGE_MONTHS = { '6m': 6, '1y': 12, '3y': 36, '5y': 60 };
+const RANGE_MONTHS = { '2m': 2, '3m': 3, '6m': 6, '1y': 12, '3y': 36, '5y': 60 };
 const rangeKey = value => Object.prototype.hasOwnProperty.call(RANGE_MONTHS, value) ? value : '6m';
 const formatUtcDate = date => `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`;
 const rangeDates = value => {
@@ -208,15 +208,18 @@ async function buildStudy(code, requestedRange) {
 }
 
 async function buildSymbolDirectory() {
-  const [listedResult, otcResult] = await Promise.allSettled([
+  const [listedResult, otcBasicResult, otcQuoteResult] = await Promise.allSettled([
     json('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'),
     json('https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O'),
+    json('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes'),
   ]);
   const listed = listedResult.status === 'fulfilled' ? listedResult.value : [];
-  const otc = otcResult.status === 'fulfilled' ? otcResult.value : [];
+  const otcBasic = otcBasicResult.status === 'fulfilled' ? otcBasicResult.value : [];
+  const otcQuotes = otcQuoteResult.status === 'fulfilled' ? otcQuoteResult.value : [];
   const records = [
     ...listed.map(row => ({ code: String(row.Code || '').trim(), name: String(row.Name || '').trim(), market: 'listed' })),
-    ...otc.map(row => ({ code: String(row.SecuritiesCompanyCode || '').trim(), name: String(row.CompanyAbbreviation || row.CompanyName || '').trim(), market: 'otc' })),
+    ...otcBasic.map(row => ({ code: String(row.SecuritiesCompanyCode || '').trim(), name: String(row.CompanyAbbreviation || row.CompanyName || '').trim(), market: 'otc' })),
+    ...otcQuotes.map(row => ({ code: String(row.SecuritiesCompanyCode || '').trim(), name: String(row.CompanyName || '').trim(), market: 'otc' })),
   ].filter(row => /^\d{4}$/.test(row.code) && row.name);
   const symbols = [...new Map(records.map(row => [row.code, row])).values()].sort((a, b) => a.code.localeCompare(b.code));
   if (!symbols.length) throw new Error('上市櫃股票名稱清單暫時無法取得');
@@ -226,11 +229,20 @@ async function buildSymbolDirectory() {
 async function quotes(request) {
   const url = new URL(request.url);
   const codes = [...new Set((url.searchParams.get('codes') || '').split(',').map(code => code.trim()).filter(code => /^\d{4,6}$/.test(code)))].slice(0, 120);
+  const requested = new Set(codes);
   const chunks = Array.from({ length: Math.ceil(codes.length / 30) }, (_, index) => codes.slice(index * 30, index * 30 + 30));
   const listedRequest = fetch('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL', { headers: HEADERS }).then(async response => {
     if (!response.ok) throw new Error(`listed ${response.status}`);
-    return response.json();
+    const rows = await response.json();
+    return rows.filter(row => requested.has(String(row.Code || '').trim()));
   });
+  const otcOfficialRequest = json('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes').then(rows => rows
+    .filter(row => requested.has(String(row.SecuritiesCompanyCode || '').trim()))
+    .map(row => ({
+      SecuritiesCompanyCode: String(row.SecuritiesCompanyCode || '').trim(),
+      ClosingPrice: row.Close,
+      Change: row.Change,
+    })));
   const otcRequests = chunks.map(async chunk => {
     const channel = chunk.map(code => `otc_${code}.tw`).join('|');
     const response = await fetch(`https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${encodeURIComponent(channel)}&json=1&delay=0`, { headers: HEADERS });
@@ -241,9 +253,11 @@ async function quotes(request) {
       return { SecuritiesCompanyCode: row.c, ClosingPrice: price, Change: Number.isFinite(previous) && Number.isFinite(current) ? String(current - previous) : null };
     });
   });
-  const [listedResult, ...otcResults] = await Promise.allSettled([listedRequest, ...otcRequests]);
+  const [listedResult, otcOfficialResult, ...otcResults] = await Promise.allSettled([listedRequest, otcOfficialRequest, ...otcRequests]);
   const listed = listedResult.status === 'fulfilled' ? listedResult.value : [];
-  const otc = otcResults.flatMap(result => result.status === 'fulfilled' ? result.value : []);
+  const otcOfficial = otcOfficialResult.status === 'fulfilled' ? otcOfficialResult.value : [];
+  const otcRealtime = otcResults.flatMap(result => result.status === 'fulfilled' ? result.value : []);
+  const otc = [...new Map([...otcOfficial, ...otcRealtime].map(row => [row.SecuritiesCompanyCode, row])).values()];
   if (!listed.length && !otc.length) throw new Error('all quote sources failed');
   return Response.json({ listed, otc }, { headers: { 'Cache-Control': 'no-store' } });
 }
@@ -271,7 +285,7 @@ export default {
     }
     if (url.pathname === '/api/symbols') {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
-      const cache = caches.default, key = new Request(`${url.origin}/api/symbols?schema=1`);
+      const cache = caches.default, key = new Request(`${url.origin}/api/symbols?schema=2`);
       const cached = await cache.match(key);
       if (cached) return cached;
       try {
