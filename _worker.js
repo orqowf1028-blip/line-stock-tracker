@@ -16,7 +16,7 @@ const isoDate = value => {
 };
 const ymd = value => String(value || '').replaceAll('-', '');
 const RANGE_MONTHS = { '2m': 2, '3m': 3, '6m': 6, '1y': 12, '3y': 36, '5y': 60 };
-const rangeKey = value => Object.prototype.hasOwnProperty.call(RANGE_MONTHS, value) ? value : '6m';
+const rangeKey = value => Object.prototype.hasOwnProperty.call(RANGE_MONTHS, value) ? value : '2m';
 const formatUtcDate = date => `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`;
 const rangeDates = value => {
   const end = new Date(), start = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate()));

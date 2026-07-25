@@ -2,7 +2,7 @@ const $ = selector => document.querySelector(selector);
 let code = new URLSearchParams(location.search).get('code') || '';
 const NS = 'http://www.w3.org/2000/svg';
 const RANGE_LABELS = { '2m': '近 2 個月', '3m': '近 3 個月', '6m': '近 6 個月', '1y': '近 1 年', '3y': '近 3 年', '5y': '近 5 年' };
-let currentRange = RANGE_LABELS[new URLSearchParams(location.search).get('range')] ? new URLSearchParams(location.search).get('range') : '6m';
+let currentRange = RANGE_LABELS[new URLSearchParams(location.search).get('range')] ? new URLSearchParams(location.search).get('range') : '2m';
 const TRACKER_SIGNALS = window.LINE_TRACKER_SIGNALS || [];
 const fmt = (value, digits = 2) => Number.isFinite(Number(value)) ? Number(value).toLocaleString('zh-TW', { maximumFractionDigits: digits, minimumFractionDigits: digits }) : '—';
 const finite = value => Number.isFinite(Number(value)) ? Number(value) : null;
@@ -32,6 +32,17 @@ function movingAverage(values, length) {
     const sample = values.slice(index + 1 - length, index + 1).map(finite);
     return sample.some(value => value === null) ? null : sample.reduce((sum, value) => sum + value, 0) / length;
   });
+}
+function activeSmaSpecs() {
+  const specs = [
+    { length: 5, color: '#ffbd59' },
+    { length: 10, color: '#70c8ff' },
+    { length: 20, color: '#5bd68f' },
+  ];
+  if (['6m', '1y', '3y', '5y'].includes(currentRange)) specs.push({ length: 60, color: '#f58bff' });
+  if (['1y', '3y', '5y'].includes(currentRange)) specs.push({ length: 180, color: '#ff8f70' });
+  if (['3y', '5y'].includes(currentRange)) specs.push({ length: 240, color: '#d7d95c' });
+  return specs;
 }
 function trend(current, previous) {
   const a = finite(current), b = finite(previous);
@@ -83,11 +94,7 @@ function drawKline(candles, institutions = [], holdings = []) {
   const step = (plotRight - plotLeft) / data.length, x = index => plotLeft + (index + .5) * step, y = value => priceBottom - (value - low) / (high - low) * (priceBottom - priceTop), bodyWidth = clamp(step * .68, .35, 10);
   grid(chart, width, priceTop, priceBottom, low, high);
   const closes = data.map(row => row.close), volumes = data.map(row => row.volume || 0), maxVolume = Math.max(...volumes, 1);
-  const averages = [
-    { length: 5, color: '#ffbd59', values: movingAverage(closes, 5) },
-    { length: 10, color: '#70c8ff', values: movingAverage(closes, 10) },
-    { length: 20, color: '#5bd68f', values: movingAverage(closes, 20) },
-  ];
+  const averages = activeSmaSpecs().map(spec => ({ ...spec, values: movingAverage(closes, spec.length) }));
   const volumeMa5 = movingAverage(volumes, 5), volumeMa10 = movingAverage(volumes, 10);
 
   // A price-by-volume activity proxy. Official data does not expose account
@@ -150,8 +157,10 @@ function drawKline(candles, institutions = [], holdings = []) {
     const current = average.values[latestIndex], previous = average.values[latestIndex - 1];
     header.push({ value: `SMA${average.length} ${fmt(current)} ${trend(current, previous)}`, color: average.color });
   });
-  let headerX = 8;
-  header.forEach(item => { chart.append(svg('text', { x: headerX, y: 18, fill: item.color, 'font-size': 12, 'font-weight': 700 }, item.value)); headerX += 166; });
+  header.forEach((item, index) => {
+    const headerX = 8 + index % 3 * 248, headerY = 16 + Math.floor(index / 3) * 15;
+    chart.append(svg('text', { x: headerX, y: headerY, fill: item.color, 'font-size': 11, 'font-weight': 700 }, item.value));
+  });
   chart.append(svg('line', { x1: 0, y1: 263, x2: width, y2: 263, stroke: '#42647c', 'stroke-width': .8 }));
   const latestVolume = volumes[latestIndex], previousVolume = volumes[latestIndex - 1];
   const volumeLabels = [
@@ -342,14 +351,21 @@ async function loadStudy(targetCode, pushHistory = false) {
   code = targetCode; const sequence = ++loadSequence; prepareLoading(code);
   if (pushHistory) { const next = new URL(location.href); next.searchParams.set('code', code); next.searchParams.set('range', currentRange); history.pushState({ code, range: currentRange }, '', next); }
   try {
-    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=7`, { cache: 'no-store' });
+    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=8`, { cache: 'no-store' });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
     if (sequence !== loadSequence) return;
     studyData = payload; render(payload); const resolvedName = payload.name && payload.name !== code ? payload.name : ''; $('#symbolInput').value = resolvedName ? `${resolvedName}（${code}）` : code; text('#symbolStatus', resolvedName ? `${resolvedName}（${code}）已更新完整研究頁` : `${code} 已更新完整研究頁`);
   } catch (cause) { if (sequence === loadSequence) error(`個股研究資料暫時無法完成：${cause.message || cause}`); }
 }
-function setRangeButtons() { document.querySelectorAll('[data-range]').forEach(button => button.classList.toggle('active', button.dataset.range === currentRange)); }
+function setRangeButtons() {
+  document.querySelectorAll('[data-range]').forEach(button => button.classList.toggle('active', button.dataset.range === currentRange));
+  const activeLengths = new Set(activeSmaSpecs().map(item => item.length));
+  for (const length of [60, 180, 240]) {
+    const legend = document.querySelector(`[data-sma-legend="${length}"]`);
+    if (legend) legend.hidden = !activeLengths.has(length);
+  }
+}
 function initRangeControls() {
   setRangeButtons();
   document.querySelectorAll('[data-range]').forEach(button => button.addEventListener('click', () => {
@@ -375,7 +391,7 @@ function initSymbolSearch() {
   });
   $('#name').addEventListener('click', focusSymbolInput); $('#name').addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); focusSymbolInput(); } });
   addEventListener('popstate', () => {
-    const params = new URLSearchParams(location.search), target = params.get('code') || '', nextRange = RANGE_LABELS[params.get('range')] ? params.get('range') : '6m';
+    const params = new URLSearchParams(location.search), target = params.get('code') || '', nextRange = RANGE_LABELS[params.get('range')] ? params.get('range') : '2m';
     const changed = target && (target !== code || nextRange !== currentRange); currentRange = nextRange; setRangeButtons(); if (changed) loadStudy(target, false);
   });
   loadSymbols().catch(() => {});
