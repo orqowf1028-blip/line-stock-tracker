@@ -79,6 +79,16 @@ async function finMindCandles(code, startDate, endDate) {
   }).filter(([date, row]) => /^\d{4}-\d{2}-\d{2}$/.test(date) && row.close !== null)).values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
+async function finMindSymbols() {
+  const payload = await json('https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockInfo');
+  if (payload.status !== 200 || !Array.isArray(payload.data)) throw new Error('FinMind TaiwanStockInfo unavailable');
+  return payload.data.map(row => ({
+    code: String(row.stock_id || '').trim(),
+    name: String(row.stock_name || '').trim(),
+    market: row.type === 'tpex' ? 'otc' : row.type === 'twse' ? 'listed' : '',
+  })).filter(row => /^\d{4}$/.test(row.code) && row.name && row.market);
+}
+
 let symbolDirectoryPromise = null;
 
 async function symbolDirectory() {
@@ -208,18 +218,21 @@ async function buildStudy(code, requestedRange) {
 }
 
 async function buildSymbolDirectory() {
-  const [listedResult, otcBasicResult, otcQuoteResult] = await Promise.allSettled([
+  const [listedResult, otcBasicResult, otcQuoteResult, finMindResult] = await Promise.allSettled([
     json('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'),
     json('https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O'),
     json('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes'),
+    finMindSymbols(),
   ]);
   const listed = listedResult.status === 'fulfilled' ? listedResult.value : [];
   const otcBasic = otcBasicResult.status === 'fulfilled' ? otcBasicResult.value : [];
   const otcQuotes = otcQuoteResult.status === 'fulfilled' ? otcQuoteResult.value : [];
+  const finMindRecords = finMindResult.status === 'fulfilled' ? finMindResult.value : [];
   const records = [
     ...listed.map(row => ({ code: String(row.Code || '').trim(), name: String(row.Name || '').trim(), market: 'listed' })),
     ...otcBasic.map(row => ({ code: String(row.SecuritiesCompanyCode || '').trim(), name: String(row.CompanyAbbreviation || row.CompanyName || '').trim(), market: 'otc' })),
     ...otcQuotes.map(row => ({ code: String(row.SecuritiesCompanyCode || '').trim(), name: String(row.CompanyName || '').trim(), market: 'otc' })),
+    ...finMindRecords,
   ].filter(row => /^\d{4}$/.test(row.code) && row.name);
   const symbols = [...new Map(records.map(row => [row.code, row])).values()].sort((a, b) => a.code.localeCompare(b.code));
   if (!symbols.length) throw new Error('上市櫃股票名稱清單暫時無法取得');
@@ -285,7 +298,7 @@ export default {
     }
     if (url.pathname === '/api/symbols') {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
-      const cache = caches.default, key = new Request(`${url.origin}/api/symbols?schema=2`);
+      const cache = caches.default, key = new Request(`${url.origin}/api/symbols?schema=3`);
       const cached = await cache.match(key);
       if (cached) return cached;
       try {
