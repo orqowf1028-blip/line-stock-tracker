@@ -342,7 +342,7 @@ async function loadStudy(targetCode, pushHistory = false) {
   code = targetCode; const sequence = ++loadSequence; prepareLoading(code);
   if (pushHistory) { const next = new URL(location.href); next.searchParams.set('code', code); next.searchParams.set('range', currentRange); history.pushState({ code, range: currentRange }, '', next); }
   try {
-    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=6`, { cache: 'no-store' });
+    const response = await fetch(`/api/stock?code=${encodeURIComponent(code)}&range=${encodeURIComponent(currentRange)}&schema=7`, { cache: 'no-store' });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
     if (sequence !== loadSequence) return;
