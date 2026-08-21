@@ -241,7 +241,7 @@ async function buildSymbolDirectory() {
 
 async function quotes(request) {
   const url = new URL(request.url);
-  const codes = [...new Set((url.searchParams.get('codes') || '').split(',').map(code => code.trim()).filter(code => /^\d{4,6}$/.test(code)))].slice(0, 120);
+  const codes = [...new Set((url.searchParams.get('codes') || '').split(',').map(code => code.trim()).filter(code => /^(?:00\d{3}[A-Z]?|\d{4,6})$/.test(code)))].slice(0, 120);
   const requested = new Set(codes);
   const chunks = Array.from({ length: Math.ceil(codes.length / 30) }, (_, index) => codes.slice(index * 30, index * 30 + 30));
   const listedRequest = fetch('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL', { headers: HEADERS }).then(async response => {
