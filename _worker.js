@@ -263,8 +263,9 @@ async function quotes(request) {
     const payload = JSON.parse((await response.text()).trim());
     return (payload.msgArray || []).filter(row => row.ex === 'otc' && row.c).map(row => {
       const price = row.z && row.z !== '-' ? row.z : row.pz, previous = Number(row.y), current = Number(price);
+      if (!Number.isFinite(current) || current <= 0) return null;
       return { SecuritiesCompanyCode: row.c, ClosingPrice: price, Change: Number.isFinite(previous) && Number.isFinite(current) ? String(current - previous) : null };
-    });
+    }).filter(Boolean);
   });
   const [listedResult, otcOfficialResult, ...otcResults] = await Promise.allSettled([listedRequest, otcOfficialRequest, ...otcRequests]);
   const listed = listedResult.status === 'fulfilled' ? listedResult.value : [];
