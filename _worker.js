@@ -272,8 +272,27 @@ async function quotes(request) {
   const otcOfficial = otcOfficialResult.status === 'fulfilled' ? otcOfficialResult.value : [];
   const otcRealtime = otcResults.flatMap(result => result.status === 'fulfilled' ? result.value : []);
   const otc = [...new Map([...otcOfficial, ...otcRealtime].map(row => [row.SecuritiesCompanyCode, row])).values()];
-  if (!listed.length && !otc.length) throw new Error('all quote sources failed');
-  return Response.json({ listed, otc }, { headers: { 'Cache-Control': 'no-store' } });
+  const foundCodes = new Set([
+    ...listed.map(row => String(row.Code || '').trim()),
+    ...otc.map(row => String(row.SecuritiesCompanyCode || '').trim()),
+  ]);
+  const missingCodes = codes.filter(code => !foundCodes.has(code)).slice(0, 12);
+  const end = new Date(), start = new Date(end);
+  start.setUTCDate(start.getUTCDate() - 30);
+  const finMindResults = await Promise.allSettled(missingCodes.map(async code => {
+    const candles = await finMindCandles(code, formatUtcDate(start), formatUtcDate(end));
+    const latest = candles.at(-1), previous = candles.at(-2);
+    if (!latest || !Number.isFinite(latest.close)) return null;
+    return {
+      SecuritiesCompanyCode: code,
+      ClosingPrice: String(latest.close),
+      Change: previous && Number.isFinite(previous.close) ? String(latest.close - previous.close) : null,
+    };
+  }));
+  const finMindFallback = finMindResults.flatMap(result => result.status === 'fulfilled' && result.value ? [result.value] : []);
+  const mergedOtc = [...new Map([...otc, ...finMindFallback].map(row => [row.SecuritiesCompanyCode, row])).values()];
+  if (!listed.length && !mergedOtc.length) throw new Error('all quote sources failed');
+  return Response.json({ listed, otc: mergedOtc }, { headers: { 'Cache-Control': 'no-store' } });
 }
 
 export default {
