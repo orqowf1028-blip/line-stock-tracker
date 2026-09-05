@@ -298,6 +298,14 @@ async function quotes(request) {
 export default {
   async fetch(request, env, context) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/release') {
+      if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
+      return Response.json({
+        commit: env.CF_PAGES_COMMIT_SHA || 'unavailable',
+        branch: env.CF_PAGES_BRANCH || 'main',
+        deployment: env.CF_PAGES_URL || url.origin,
+      }, { headers: { 'Cache-Control': 'no-store' } });
+    }
     if (url.pathname === '/api/quotes') {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
       try { return await quotes(request); } catch (error) { return Response.json({ error: String(error?.message || error) }, { status: 502 }); }
