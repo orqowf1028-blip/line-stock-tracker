@@ -1,0 +1,210 @@
+{
+  "registry_id": "W01_SIGNAL_DEFINITION_REGISTRY_V1",
+  "version": "1.0",
+  "as_of": "2026-09-06",
+  "versioning_policy": "Historical events retain the definition ID/version assigned at ingestion; later definitions do not rewrite them.",
+  "taxonomy_policy": "Only v1.2 action/position semantics are represented; unsupported analytical families remain UNCLASSIFIED.",
+  "action_vocabulary": [
+    "BUY",
+    "ADD",
+    "REDUCE",
+    "SELL",
+    "SHORT",
+    "COVER",
+    "HOLD",
+    "OTHER"
+  ],
+  "direction_vocabulary": [
+    "BULLISH",
+    "BEARISH",
+    "NEUTRAL",
+    "UNKNOWN"
+  ],
+  "exit_scope_vocabulary": [
+    "FULL",
+    "PARTIAL",
+    "UNKNOWN"
+  ],
+  "definitions": [
+    {
+      "signal_id": "W01-SIG-BUY-V1",
+      "signal_family": "LONG_POSITION",
+      "signal_name": "買進",
+      "direction": "BULLISH",
+      "action_semantics": "BUY",
+      "description": "建立新的多方部位；數量未知時仍保留 BUY。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-ADD-V1",
+      "signal_family": "LONG_POSITION",
+      "signal_name": "加碼",
+      "direction": "BULLISH",
+      "action_semantics": "ADD",
+      "description": "增加既有多方部位；不得降級成一般買進。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-HOLD-V1",
+      "signal_family": "LONG_POSITION",
+      "signal_name": "續抱",
+      "direction": "BULLISH",
+      "action_semantics": "HOLD",
+      "description": "維持既有多方部位；歷史進場敘述不建立當日 BUY。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-SELL-V1",
+      "signal_family": "LONG_POSITION",
+      "signal_name": "賣出",
+      "direction": "BEARISH",
+      "action_semantics": "SELL",
+      "description": "減少多方部位；exit_scope 由事件 Evidence 決定，SELL 不自動等於 FULL。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-EXIT-FULL-V1",
+      "signal_family": "LONG_POSITION",
+      "signal_name": "出場",
+      "direction": "BEARISH",
+      "action_semantics": "SELL",
+      "description": "來源明確表示全數出清；事件 exit_scope 必須為 FULL。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-SHORT-V1",
+      "signal_family": "SHORT_POSITION",
+      "signal_name": "放空",
+      "direction": "BEARISH",
+      "action_semantics": "SHORT",
+      "description": "空方建立；W01 v1.2 UI 維持市場訊號｜放空。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-COVER-V1",
+      "signal_family": "SHORT_POSITION",
+      "signal_name": "回補",
+      "direction": "NEUTRAL",
+      "action_semantics": "COVER",
+      "description": "空方回補；不等同建立多方部位。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-MARKET-WATCH-V1",
+      "signal_family": "MARKET_CONTEXT",
+      "signal_name": "市場觀察",
+      "direction": "UNKNOWN",
+      "action_semantics": "OTHER",
+      "description": "沒有可執行交易動作的市場或個股評論。",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FROM_EXISTING_V1_2_EVENT_SEMANTICS",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    },
+    {
+      "signal_id": "W01-SIG-UNCLASSIFIED-V1",
+      "signal_family": "UNCLASSIFIED",
+      "signal_name": "未分類",
+      "direction": "UNKNOWN",
+      "action_semantics": "OTHER",
+      "description": "Evidence 不足以對應既有 v1.2 action semantics 的合法 fallback。",
+      "version": "1.0",
+      "status": "FALLBACK",
+      "valid_from": null,
+      "valid_to": null,
+      "evidence_grade_capability": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reconstructability": "FALLBACK_ONLY",
+      "notes": "Definition only; outcome, score, regime, and position sizing are outside v1.3 scope."
+    }
+  ]
+}

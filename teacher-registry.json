@@ -1,0 +1,1482 @@
+{
+  "registry_id": "W01_TEACHER_REGISTRY_V1",
+  "version": "1.0",
+  "as_of": "2026-09-06",
+  "identity_policy": {
+    "id_management": "explicitly_managed_sequential_id; existing IDs are retained on rerun",
+    "rename_policy": "update display_name and preserve prior names as aliases; do not allocate a new ID",
+    "uncertain_merge_policy": "preserve separate identities and mark REVIEW_REQUIRED",
+    "missing_teacher_policy": "use special identity W01-T-UNKNOWN; do not guess"
+  },
+  "lifecycle_definitions": {
+    "ACTIVE": "present in current advisor-page inventory or seen in the latest 30 evidence-backed days",
+    "NOT_OBSERVED": "historical identity not observed in the current-page inventory or latest 30 evidence-backed days",
+    "INACTIVE_RETIRED": "reserved; only set when explicit evidence exists",
+    "UNKNOWN": "identity or lifecycle cannot be established safely"
+  },
+  "merge_reviews": [
+    {
+      "source_identity": "啟發容逸燊",
+      "possible_match": "容逸燊",
+      "status": "REVIEW_REQUIRED",
+      "decision": "NOT_MERGED",
+      "reason": "Name similarity alone is insufficient identity evidence."
+    },
+    {
+      "source_identity": "啟發郭憲政",
+      "possible_match": "郭憲政",
+      "status": "REVIEW_REQUIRED",
+      "decision": "NOT_MERGED",
+      "reason": "Name similarity alone is insufficient identity evidence."
+    }
+  ],
+  "teachers": [
+    {
+      "teacher_id": "W01-T-0001",
+      "canonical_name": "丁超",
+      "display_name": "丁超",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "丁超"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0002",
+      "canonical_name": "世",
+      "display_name": "世",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "世"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0003",
+      "canonical_name": "何丞唐",
+      "display_name": "何丞唐",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "何丞唐"
+        ],
+        "member_page_or_event_labels": [
+          "何丞唐"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0004",
+      "canonical_name": "何基鼎",
+      "display_name": "何基鼎",
+      "aliases": [
+        "何基鼎專"
+      ],
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "何基鼎",
+          "何基鼎（猜）"
+        ],
+        "member_page_or_event_labels": [
+          "何基鼎",
+          "何基鼎專"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0005",
+      "canonical_name": "余正君",
+      "display_name": "余正君",
+      "aliases": [],
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "余正君"
+        ],
+        "member_page_or_event_labels": [
+          "余正君"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0006",
+      "canonical_name": "倫元周贏",
+      "display_name": "倫元周贏",
+      "aliases": [],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "倫元周贏"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0007",
+      "canonical_name": "劉青峻",
+      "display_name": "劉青峻",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "劉青峻"
+        ],
+        "member_page_or_event_labels": [
+          "劉青峻"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0008",
+      "canonical_name": "吳岳展",
+      "display_name": "吳岳展",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [],
+        "member_page_or_event_labels": [
+          "吳岳展"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0009",
+      "canonical_name": "周佳和",
+      "display_name": "周佳和",
+      "aliases": [],
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "周佳和"
+        ],
+        "member_page_or_event_labels": [
+          "周佳和"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0010",
+      "canonical_name": "周豪佳",
+      "display_name": "周豪佳",
+      "aliases": [],
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "周豪佳"
+        ],
+        "member_page_or_event_labels": [
+          "周豪佳"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0011",
+      "canonical_name": "周鑽飆",
+      "display_name": "周鑽飆",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "周鑽飆"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0012",
+      "canonical_name": "啟發容逸燊",
+      "display_name": "啟發容逸燊",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "UNKNOWN",
+      "source_identifiers": {
+        "production_display_labels": [
+          "啟發容逸燊"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "UNKNOWN",
+      "review_status": "REVIEW_REQUIRED",
+      "notes": "Possible match to 容逸燊; deliberately not merged without evidence."
+    },
+    {
+      "teacher_id": "W01-T-0013",
+      "canonical_name": "啟發郭憲政",
+      "display_name": "啟發郭憲政",
+      "aliases": [],
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "lifecycle_status": "UNKNOWN",
+      "source_identifiers": {
+        "production_display_labels": [
+          "啟發郭憲政"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "UNKNOWN",
+      "review_status": "REVIEW_REQUIRED",
+      "notes": "Possible match to 郭憲政; deliberately not merged without evidence."
+    },
+    {
+      "teacher_id": "W01-T-0014",
+      "canonical_name": "容逸燊",
+      "display_name": "容逸燊",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "容逸燊"
+        ],
+        "member_page_or_event_labels": [
+          "容逸燊"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0015",
+      "canonical_name": "廖祥安",
+      "display_name": "廖祥安",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "廖祥安"
+        ],
+        "member_page_or_event_labels": [
+          "廖祥安"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0016",
+      "canonical_name": "張嘉軒",
+      "display_name": "張嘉軒",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "張嘉軒"
+        ],
+        "member_page_or_event_labels": [
+          "張嘉軒"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0017",
+      "canonical_name": "張宇明",
+      "display_name": "張宇明",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "張宇明"
+        ],
+        "member_page_or_event_labels": [
+          "張宇明"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0018",
+      "canonical_name": "張家豪",
+      "display_name": "張家豪",
+      "aliases": [],
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "張家豪"
+        ],
+        "member_page_or_event_labels": [
+          "張家豪"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0019",
+      "canonical_name": "張貽程",
+      "display_name": "張貽程",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "張貽程"
+        ],
+        "member_page_or_event_labels": [
+          "張貽程"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0020",
+      "canonical_name": "張震",
+      "display_name": "張震",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "張震"
+        ],
+        "member_page_or_event_labels": [
+          "張震"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0021",
+      "canonical_name": "徐紹軒",
+      "display_name": "徐紹軒",
+      "aliases": [],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "徐紹軒"
+        ],
+        "member_page_or_event_labels": [
+          "徐紹軒"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-UNKNOWN",
+      "canonical_name": "未標示",
+      "display_name": "未標示",
+      "aliases": [],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-03",
+      "lifecycle_status": "UNKNOWN",
+      "source_identifiers": {
+        "production_display_labels": [
+          "未標示"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "UNKNOWN",
+      "review_status": "REVIEW_REQUIRED",
+      "notes": "Source does not identify a teacher; no attribution is inferred."
+    },
+    {
+      "teacher_id": "W01-T-0022",
+      "canonical_name": "李世新",
+      "display_name": "李世新",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李世新"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0023",
+      "canonical_name": "李冠嶔",
+      "display_name": "李冠嶔",
+      "aliases": [
+        "李冠嶔特",
+        "李冠嶶特"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李冠嶔"
+        ],
+        "member_page_or_event_labels": [
+          "李冠嶔",
+          "李冠嶔特"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0024",
+      "canonical_name": "李國芳",
+      "display_name": "李國芳",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李國芳"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0025",
+      "canonical_name": "李春生",
+      "display_name": "李春生",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李春生"
+        ],
+        "member_page_or_event_labels": [
+          "李春生"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0026",
+      "canonical_name": "李永年",
+      "display_name": "李永年",
+      "aliases": [],
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李永年"
+        ],
+        "member_page_or_event_labels": [
+          "李永年"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0027",
+      "canonical_name": "李蜀芳",
+      "display_name": "李蜀芳",
+      "aliases": [],
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "李蜀芳"
+        ],
+        "member_page_or_event_labels": [
+          "李蜀芳"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0028",
+      "canonical_name": "林漢偉",
+      "display_name": "林漢偉",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [],
+        "member_page_or_event_labels": [
+          "林漢偉"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0029",
+      "canonical_name": "林睿閎",
+      "display_name": "林睿閎",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "林睿閎",
+          "林睿閎（猜）"
+        ],
+        "member_page_or_event_labels": [
+          "林睿閎"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0030",
+      "canonical_name": "林鈺凱",
+      "display_name": "林鈺凱",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "林鈺凱"
+        ],
+        "member_page_or_event_labels": [
+          "林鈺凱"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0031",
+      "canonical_name": "林鍾翔",
+      "display_name": "林鍾翔",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "林鍾翔"
+        ],
+        "member_page_or_event_labels": [
+          "林鍾翔"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0032",
+      "canonical_name": "楊少凱",
+      "display_name": "楊少凱",
+      "aliases": [],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "楊少凱"
+        ],
+        "member_page_or_event_labels": [
+          "楊少凱"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0033",
+      "canonical_name": "楊惠宇",
+      "display_name": "楊惠宇",
+      "aliases": [],
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "楊惠宇"
+        ],
+        "member_page_or_event_labels": [
+          "楊惠宇"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0034",
+      "canonical_name": "楊育華",
+      "display_name": "楊育華",
+      "aliases": [],
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-09-03",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "楊育華"
+        ],
+        "member_page_or_event_labels": [
+          "楊育華"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0035",
+      "canonical_name": "江國中",
+      "display_name": "江國中",
+      "aliases": [],
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-09-01",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "江國中"
+        ],
+        "member_page_or_event_labels": [
+          "江國中"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0036",
+      "canonical_name": "涂敏峰",
+      "display_name": "涂敏峰",
+      "aliases": [
+        "涂敏峰嬴",
+        "涂敏峰親",
+        "涂敏峰贏",
+        "涂親"
+      ],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "涂敏峰"
+        ],
+        "member_page_or_event_labels": [
+          "涂敏峰",
+          "涂敏峰親",
+          "涂敏峰贏"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0037",
+      "canonical_name": "王可立",
+      "display_name": "王可立",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "王可立"
+        ],
+        "member_page_or_event_labels": [
+          "王可立"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0038",
+      "canonical_name": "王建文",
+      "display_name": "王建文",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "王建文"
+        ],
+        "member_page_or_event_labels": [
+          "王建文"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0039",
+      "canonical_name": "王榮旭",
+      "display_name": "王榮旭",
+      "aliases": [],
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "王榮旭"
+        ],
+        "member_page_or_event_labels": [
+          "王榮旭"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0040",
+      "canonical_name": "瑞克",
+      "display_name": "瑞克",
+      "aliases": [],
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "瑞克"
+        ],
+        "member_page_or_event_labels": [
+          "瑞克"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0041",
+      "canonical_name": "紀緯明",
+      "display_name": "紀緯明",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "紀緯明"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0042",
+      "canonical_name": "翁士峻",
+      "display_name": "翁士峻",
+      "aliases": [],
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "翁士峻"
+        ],
+        "member_page_or_event_labels": [
+          "翁士峻"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0043",
+      "canonical_name": "艾綸",
+      "display_name": "艾綸",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "艾綸"
+        ],
+        "member_page_or_event_labels": [
+          "艾綸"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0044",
+      "canonical_name": "范振鴻",
+      "display_name": "范振鴻",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "范振鴻"
+        ],
+        "member_page_or_event_labels": [
+          "范振鴻"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0045",
+      "canonical_name": "莊佳瑩",
+      "display_name": "莊佳瑩",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "莊佳瑩"
+        ],
+        "member_page_or_event_labels": [
+          "莊佳瑩"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0046",
+      "canonical_name": "莊家贏",
+      "display_name": "莊家贏",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "莊家贏"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0047",
+      "canonical_name": "葉俊敏",
+      "display_name": "葉俊敏",
+      "aliases": [],
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "葉俊敏"
+        ],
+        "member_page_or_event_labels": [
+          "葉俊敏"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0048",
+      "canonical_name": "葉子暘",
+      "display_name": "葉子暘",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "葉子暘"
+        ],
+        "member_page_or_event_labels": [
+          "葉子暘"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0049",
+      "canonical_name": "葉宇乘",
+      "display_name": "葉宇乘",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "葉宇乘"
+        ],
+        "member_page_or_event_labels": [
+          "葉宇乘"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0050",
+      "canonical_name": "蔡明彰",
+      "display_name": "蔡明彰",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蔡明彰"
+        ],
+        "member_page_or_event_labels": [
+          "蔡明彰"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0051",
+      "canonical_name": "蔡正華",
+      "display_name": "蔡正華",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蔡正華"
+        ],
+        "member_page_or_event_labels": [
+          "蔡正華"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0052",
+      "canonical_name": "蔡豐勝",
+      "display_name": "蔡豐勝",
+      "aliases": [
+        "豐勝"
+      ],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蔡豐勝"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0053",
+      "canonical_name": "蕭又銘",
+      "display_name": "蕭又銘",
+      "aliases": [],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蕭又銘"
+        ],
+        "member_page_or_event_labels": [
+          "蕭又銘"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0054",
+      "canonical_name": "蘇尊龍",
+      "display_name": "蘇尊龍",
+      "aliases": [],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蘇尊龍"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0055",
+      "canonical_name": "蘇建豐",
+      "display_name": "蘇建豐",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蘇建豐"
+        ],
+        "member_page_or_event_labels": [
+          "蘇建豐"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0056",
+      "canonical_name": "蘇特別",
+      "display_name": "蘇特別",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蘇特別"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0057",
+      "canonical_name": "蘇麗芬",
+      "display_name": "蘇麗芬",
+      "aliases": [
+        "蘇麗芬特"
+      ],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "蘇麗芬"
+        ],
+        "member_page_or_event_labels": [
+          "蘇麗芬",
+          "蘇麗芬特"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0058",
+      "canonical_name": "許毓玲",
+      "display_name": "許毓玲",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "許毓玲"
+        ],
+        "member_page_or_event_labels": [
+          "許毓玲"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0059",
+      "canonical_name": "謝晨彥",
+      "display_name": "謝晨彥",
+      "aliases": [],
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "謝晨彥"
+        ],
+        "member_page_or_event_labels": [
+          "謝晨彥"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0060",
+      "canonical_name": "郭哲榮",
+      "display_name": "郭哲榮",
+      "aliases": [],
+      "first_seen": "2025-08-18",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "郭哲榮"
+        ],
+        "member_page_or_event_labels": [
+          "郭哲榮"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0061",
+      "canonical_name": "郭憲政",
+      "display_name": "郭憲政",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "郭憲政"
+        ],
+        "member_page_or_event_labels": [
+          "郭憲政"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0062",
+      "canonical_name": "鄭瑞宗",
+      "display_name": "鄭瑞宗",
+      "aliases": [],
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "鄭瑞宗"
+        ],
+        "member_page_or_event_labels": [
+          "鄭瑞宗"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0063",
+      "canonical_name": "阮惠慈",
+      "display_name": "阮惠慈",
+      "aliases": [],
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "阮惠慈"
+        ],
+        "member_page_or_event_labels": [
+          "阮惠慈"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0064",
+      "canonical_name": "陳俊言",
+      "display_name": "陳俊言",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳俊言"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0065",
+      "canonical_name": "陳嘉偉",
+      "display_name": "陳嘉偉",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳嘉偉"
+        ],
+        "member_page_or_event_labels": [
+          "陳嘉偉"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0066",
+      "canonical_name": "陳學進",
+      "display_name": "陳學進",
+      "aliases": [],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳學進"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0067",
+      "canonical_name": "陳昆仁",
+      "display_name": "陳昆仁",
+      "aliases": [
+        "陳昆仁親"
+      ],
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳昆仁"
+        ],
+        "member_page_or_event_labels": [
+          "陳昆仁親"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0068",
+      "canonical_name": "陳柏宏",
+      "display_name": "陳柏宏",
+      "aliases": [],
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-09-03",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳柏宏"
+        ],
+        "member_page_or_event_labels": [
+          "陳柏宏"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0069",
+      "canonical_name": "陳玠儒",
+      "display_name": "陳玠儒",
+      "aliases": [],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳玠儒"
+        ],
+        "member_page_or_event_labels": [
+          "陳玠儒"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0070",
+      "canonical_name": "陳韋廷",
+      "display_name": "陳韋廷",
+      "aliases": [],
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "陳韋廷"
+        ],
+        "member_page_or_event_labels": [
+          "陳韋廷"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0071",
+      "canonical_name": "雷老闆",
+      "display_name": "雷老闆",
+      "aliases": [
+        "金玉峰"
+      ],
+      "first_seen": null,
+      "last_seen": null,
+      "lifecycle_status": "NOT_OBSERVED",
+      "source_identifiers": {
+        "production_display_labels": [
+          "雷老闆"
+        ],
+        "member_page_or_event_labels": []
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    },
+    {
+      "teacher_id": "W01-T-0072",
+      "canonical_name": "黃靖哲",
+      "display_name": "黃靖哲",
+      "aliases": [],
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "lifecycle_status": "ACTIVE",
+      "source_identifiers": {
+        "production_display_labels": [
+          "黃靖哲"
+        ],
+        "member_page_or_event_labels": [
+          "黃靖哲"
+        ]
+      },
+      "identity_confidence": "HIGH",
+      "review_status": "CONFIRMED",
+      "notes": "Stable identity created from existing W01 v1.2 canonical display and approved aliases."
+    }
+  ]
+}
