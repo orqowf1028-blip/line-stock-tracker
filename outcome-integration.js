@@ -2,8 +2,8 @@
   'use strict';
 
   const EXPECTED_ROWS = 18576;
-  const EXPECTED_READY = 2489;
-  const EXPECTED_HASH = '58836f90ae6a949143881bf394000c59071bf1aeef5b731c1a064afb18d7efa3';
+  const EXPECTED_READY = 2595;
+  const EXPECTED_HASH = '470b9a4ba1adbad0cd6b8da6430e4b518de5b1f6411d1afd96ed62e658738e90';
   let manifestPromise;
   let storePromise;
 
@@ -73,16 +73,20 @@
   }
 
   const baseBuildXlsxWorkbook = window.buildXlsxWorkbook;
-  window.buildXlsxWorkbook = async function buildV15XlsxWorkbook() {
+  window.buildXlsxWorkbook = async function buildV16XlsxWorkbook() {
     const [workbook, store, manifest] = await Promise.all([baseBuildXlsxWorkbook(), loadStore(), loadManifest()]);
     addOutcomesSheet(workbook, store);
     const info = workbook.getWorksheet('Export_Info');
     info.addRows([
-      ['Formal version', 'W01 v1.5 — Outcome Engine Foundation'],
+      ['Formal version', 'W01 v1.6 — Outcome Incremental Maturity & Update Monitor'],
       ['Outcome calculation_version', manifest.calculation_version],
       ['Outcome row count', manifest.outcome_rows],
       ['Outcome READY', manifest.by_status.READY],
       ['Outcome computed_at', manifest.computed_at],
+      ['Outcome last update', manifest.last_outcome_update],
+      ['Outcome price cutoff', manifest.price_cutoff_date],
+      ['Outcome run health', manifest.run_health],
+      ['Outcome retry rows', manifest.retry_queue_rows],
       ['Outcome semantic hash', manifest.semantic_hash],
       ['Outcome price basis', `${store.price_adjustment_type}; corporate actions ${store.corporate_action_status}`],
       ['Outcome limitation', 'Benchmark/sector benchmark unsupported; missing price/date states remain explicit']
@@ -90,7 +94,7 @@
     return workbook;
   };
 
-  window.downloadXlsx = async function downloadV15Xlsx() {
+  window.downloadXlsx = async function downloadV16Xlsx() {
     saveEditedNotes();
     const button = document.querySelector('#xlsxButton');
     const status = document.querySelector('#xlsxStatus');
@@ -118,7 +122,7 @@
 
   loadManifest().then(manifest => {
     const target = document.querySelector('#outcomeStatus');
-    if (target) target.textContent = `Outcome Engine：${manifest.outcome_rows.toLocaleString()} 筆／READY ${manifest.by_status.READY.toLocaleString()} 筆`;
+    if (target) target.textContent = `Outcome Engine：${manifest.outcome_rows.toLocaleString()} 筆／READY ${manifest.by_status.READY.toLocaleString()} 筆｜${manifest.run_health}`;
   }).catch(error => {
     const target = document.querySelector('#outcomeStatus');
     if (target) target.textContent = `Outcome Engine 暫時無法載入：${error.message || error}`;

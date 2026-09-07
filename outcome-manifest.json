@@ -1,14 +1,14 @@
 {
-  "artifact_id": "W01_V15_FORMAL_OUTCOME_STORE_2026-09-07",
-  "formal_candidate_version": "W01 v1.5 — Outcome Engine Foundation",
+  "artifact_id": "W01_V16_FORMAL_OUTCOME_STORE_2026-09-07",
+  "formal_candidate_version": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
   "baseline_commit": "0bbd94811cd38a647e83896501ceb6af94daa5f2",
   "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
-  "computed_at": "2026-09-07T00:13:34.780Z",
-  "price_cutoff_date": "2026-09-04",
+  "computed_at": "2026-09-07T15:45:51.147Z",
+  "price_cutoff_date": "2026-09-07",
   "canonical_events": 2322,
   "evidence_rows": 2557,
   "outcome_rows": 18576,
-  "semantic_hash": "58836f90ae6a949143881bf394000c59071bf1aeef5b731c1a064afb18d7efa3",
+  "semantic_hash": "470b9a4ba1adbad0cd6b8da6430e4b518de5b1f6411d1afd96ed62e658738e90",
   "price_adjustment_type": "RAW_UNADJUSTED",
   "corporate_action_status": "NOT_VERIFIED",
   "by_horizon": {
@@ -17,9 +17,9 @@
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 70,
-        "PRICE_DATA_MISSING": 225,
-        "READY": 608
+        "NOT_MATURED": 4,
+        "PRICE_DATA_MISSING": 246,
+        "READY": 653
       }
     },
     "3D": {
@@ -27,9 +27,9 @@
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 101,
-        "PRICE_DATA_MISSING": 221,
-        "READY": 581
+        "NOT_MATURED": 90,
+        "PRICE_DATA_MISSING": 222,
+        "READY": 591
       }
     },
     "5D": {
@@ -37,9 +37,9 @@
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 167,
-        "PRICE_DATA_MISSING": 211,
-        "READY": 525
+        "NOT_MATURED": 135,
+        "PRICE_DATA_MISSING": 220,
+        "READY": 548
       }
     },
     "10D": {
@@ -47,9 +47,9 @@
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 268,
-        "PRICE_DATA_MISSING": 183,
-        "READY": 452
+        "NOT_MATURED": 249,
+        "PRICE_DATA_MISSING": 187,
+        "READY": 467
       }
     },
     "20D": {
@@ -57,9 +57,9 @@
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 499,
-        "PRICE_DATA_MISSING": 125,
-        "READY": 279
+        "NOT_MATURED": 481,
+        "PRICE_DATA_MISSING": 130,
+        "READY": 292
       }
     },
     "60D": {
@@ -94,13 +94,57 @@
   "by_status": {
     "DATE_UNRESOLVED": 11320,
     "NOT_ELIGIBLE": 32,
-    "NOT_MATURED": 3766,
-    "PRICE_DATA_MISSING": 969,
-    "READY": 2489
+    "NOT_MATURED": 3620,
+    "PRICE_DATA_MISSING": 1009,
+    "READY": 2595
   },
-  "release_contract": "W01 v1.5 — Outcome Engine Foundation",
+  "release_contract": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
   "store_file": "outcome-store.json",
-  "store_sha256": "380ccedd7164765be77e88eca0cf75f63bfd7a765215ef4e3e5f1a7ef81b3556",
-  "store_bytes": 17945643,
-  "deployment_state_source": "/api/release"
+  "store_sha256": "2d701a506fd11505090540ee8f5e209c645bb6c0785b7d6630cd3b4adc69ac06",
+  "store_bytes": 18042690,
+  "deployment_state_source": "/api/release",
+  "last_outcome_update": "2026-09-07T15:45:51.147Z",
+  "run_health": "DEGRADED_EXTERNAL",
+  "retry_queue_rows": 1009,
+  "incremental_accounting": {
+    "mode": "APPLY",
+    "run_at": "2026-09-07T15:45:51.147Z",
+    "source_commit": "65b4c56e42e91f3d4615983477a2a20d77d1168b",
+    "price_cutoff_before": "2026-09-04",
+    "price_cutoff_after": "2026-09-07",
+    "current_outcome_total": 18576,
+    "current_ready_total": 2489,
+    "new_canonical_events_detected": 0,
+    "new_outcome_rows": 0,
+    "newly_matured_candidates": 163,
+    "retryable_missing_price_candidates": 969,
+    "recovered_retries": 8,
+    "failed_retries": 961,
+    "review_rows": 0,
+    "expected_outcome_delta": 0,
+    "actual_outcome_delta": 0,
+    "expected_ready_delta": 106,
+    "actual_ready_delta": 106,
+    "ready_drift_detected": 0,
+    "correction_candidates": 0,
+    "transitions": {
+      "NOT_MATURED->PRICE_DATA_MISSING": 48,
+      "NOT_MATURED->READY": 98,
+      "PRICE_DATA_MISSING->READY": 8
+    },
+    "duplicate_outcomes": 0,
+    "anomalies": 0,
+    "invariant_validation": "PASS",
+    "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
+    "final_outcome_total": 18576,
+    "final_ready_total": 2595,
+    "still_not_matured": 3620,
+    "price_data_missing": 1009,
+    "date_unresolved": 11320,
+    "not_eligible": 32,
+    "fetch_codes": 148,
+    "fetch_success": 55,
+    "fetch_failed": 94,
+    "run_health": "DEGRADED_EXTERNAL"
+  }
 }
