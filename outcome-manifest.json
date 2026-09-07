@@ -1,0 +1,106 @@
+{
+  "artifact_id": "W01_V15_FORMAL_OUTCOME_STORE_2026-09-07",
+  "formal_candidate_version": "W01 v1.5 — Outcome Engine Foundation",
+  "baseline_commit": "0bbd94811cd38a647e83896501ceb6af94daa5f2",
+  "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
+  "computed_at": "2026-09-07T00:13:34.780Z",
+  "price_cutoff_date": "2026-09-04",
+  "canonical_events": 2322,
+  "evidence_rows": 2557,
+  "outcome_rows": 18576,
+  "semantic_hash": "58836f90ae6a949143881bf394000c59071bf1aeef5b731c1a064afb18d7efa3",
+  "price_adjustment_type": "RAW_UNADJUSTED",
+  "corporate_action_status": "NOT_VERIFIED",
+  "by_horizon": {
+    "1D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 70,
+        "PRICE_DATA_MISSING": 225,
+        "READY": 608
+      }
+    },
+    "3D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 101,
+        "PRICE_DATA_MISSING": 221,
+        "READY": 581
+      }
+    },
+    "5D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 167,
+        "PRICE_DATA_MISSING": 211,
+        "READY": 525
+      }
+    },
+    "10D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 268,
+        "PRICE_DATA_MISSING": 183,
+        "READY": 452
+      }
+    },
+    "20D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 499,
+        "PRICE_DATA_MISSING": 125,
+        "READY": 279
+      }
+    },
+    "60D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 858,
+        "PRICE_DATA_MISSING": 4,
+        "READY": 41
+      }
+    },
+    "120D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 901,
+        "READY": 2
+      }
+    },
+    "250D": {
+      "total": 2322,
+      "by_status": {
+        "DATE_UNRESOLVED": 1415,
+        "NOT_ELIGIBLE": 4,
+        "NOT_MATURED": 902,
+        "READY": 1
+      }
+    }
+  },
+  "by_status": {
+    "DATE_UNRESOLVED": 11320,
+    "NOT_ELIGIBLE": 32,
+    "NOT_MATURED": 3766,
+    "PRICE_DATA_MISSING": 969,
+    "READY": 2489
+  },
+  "release_contract": "W01 v1.5 — Outcome Engine Foundation",
+  "store_file": "outcome-store.json",
+  "store_sha256": "380ccedd7164765be77e88eca0cf75f63bfd7a765215ef4e3e5f1a7ef81b3556",
+  "store_bytes": 17945643,
+  "deployment_state_source": "/api/release"
+}
