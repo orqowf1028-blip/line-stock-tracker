@@ -1,0 +1,2436 @@
+{
+  "run_id": "W01_V111_RELEASE_CANDIDATE_2026-09-09",
+  "summary": {
+    "total": 242,
+    "known_unsupported_instrument": 241,
+    "review_required": 1,
+    "retryable_transient": 0,
+    "permanent_unavailable": 0,
+    "unknown": 0,
+    "research_eligible": 0
+  },
+  "rows": [
+    {
+      "identity": "DERIVED:07e707d1cd3b59d819043842|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:07e707d1cd3b59d819043842|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:07e707d1cd3b59d819043842|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:07e707d1cd3b59d819043842|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:07e707d1cd3b59d819043842|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:0808b7cd20e9d6076927353d|10D",
+      "ticker": "00632R",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:0808b7cd20e9d6076927353d|1D",
+      "ticker": "00632R",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:0808b7cd20e9d6076927353d|20D",
+      "ticker": "00632R",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:0808b7cd20e9d6076927353d|3D",
+      "ticker": "00632R",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:0808b7cd20e9d6076927353d|5D",
+      "ticker": "00632R",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:09688e0dc3279f68a80e2b3d|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:09688e0dc3279f68a80e2b3d|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:09688e0dc3279f68a80e2b3d|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:09688e0dc3279f68a80e2b3d|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:09688e0dc3279f68a80e2b3d|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:099573aa13594958732fca18|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:099573aa13594958732fca18|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:099573aa13594958732fca18|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:25da61423814776303f86375|1D",
+      "ticker": "00830",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:25da61423814776303f86375|3D",
+      "ticker": "00830",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:25da61423814776303f86375|5D",
+      "ticker": "00830",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:293fbcd804273e194d135f06|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:293fbcd804273e194d135f06|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:293fbcd804273e194d135f06|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:293fbcd804273e194d135f06|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:293fbcd804273e194d135f06|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:4454354041223e08a9a31773|10D",
+      "ticker": "00735",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:4454354041223e08a9a31773|1D",
+      "ticker": "00735",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:4454354041223e08a9a31773|20D",
+      "ticker": "00735",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:4454354041223e08a9a31773|3D",
+      "ticker": "00735",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:4454354041223e08a9a31773|5D",
+      "ticker": "00735",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:5cc8cf6434f1b141deddfe0e|1D",
+      "ticker": "00735",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:5cc8cf6434f1b141deddfe0e|3D",
+      "ticker": "00735",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:5cc8cf6434f1b141deddfe0e|5D",
+      "ticker": "00735",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:6a9b26f93b59fecdc0e87f7f|10D",
+      "ticker": "00981A",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:6a9b26f93b59fecdc0e87f7f|1D",
+      "ticker": "00981A",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:6a9b26f93b59fecdc0e87f7f|20D",
+      "ticker": "00981A",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:6a9b26f93b59fecdc0e87f7f|3D",
+      "ticker": "00981A",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:6a9b26f93b59fecdc0e87f7f|5D",
+      "ticker": "00981A",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:91020685655357f934733789|10D",
+      "ticker": "00735",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:91020685655357f934733789|1D",
+      "ticker": "00735",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:91020685655357f934733789|3D",
+      "ticker": "00735",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:91020685655357f934733789|5D",
+      "ticker": "00735",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:93f7ba3d1d96cb0ed0e297c1|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:93f7ba3d1d96cb0ed0e297c1|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:93f7ba3d1d96cb0ed0e297c1|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:93f7ba3d1d96cb0ed0e297c1|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:944aa59f428f8c340ae228de|10D",
+      "ticker": "00735",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:944aa59f428f8c340ae228de|1D",
+      "ticker": "00735",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:944aa59f428f8c340ae228de|20D",
+      "ticker": "00735",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:944aa59f428f8c340ae228de|3D",
+      "ticker": "00735",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:944aa59f428f8c340ae228de|5D",
+      "ticker": "00735",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:96fc09126980c3731a78268b|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:96fc09126980c3731a78268b|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:96fc09126980c3731a78268b|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:96fc09126980c3731a78268b|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:96fc09126980c3731a78268b|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9b516abfa6def5a27ff1220e|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9b516abfa6def5a27ff1220e|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9b516abfa6def5a27ff1220e|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9b516abfa6def5a27ff1220e|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9b516abfa6def5a27ff1220e|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9db29bb67d1fb308467dd185|10D",
+      "ticker": "00981A",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9db29bb67d1fb308467dd185|1D",
+      "ticker": "00981A",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9db29bb67d1fb308467dd185|20D",
+      "ticker": "00981A",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9db29bb67d1fb308467dd185|3D",
+      "ticker": "00981A",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:9db29bb67d1fb308467dd185|5D",
+      "ticker": "00981A",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:a021ba58ef3b39a34e584fc6|10D",
+      "ticker": "00632R",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:a021ba58ef3b39a34e584fc6|1D",
+      "ticker": "00632R",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:a021ba58ef3b39a34e584fc6|20D",
+      "ticker": "00632R",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:a021ba58ef3b39a34e584fc6|3D",
+      "ticker": "00632R",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:a021ba58ef3b39a34e584fc6|5D",
+      "ticker": "00632R",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:aa232e6728f766bcba7ab6f8|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:aa232e6728f766bcba7ab6f8|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:aa232e6728f766bcba7ab6f8|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:aa232e6728f766bcba7ab6f8|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:aa232e6728f766bcba7ab6f8|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:b1b65da7547ca72713da2e38|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:b1b65da7547ca72713da2e38|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:b1b65da7547ca72713da2e38|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:b1b65da7547ca72713da2e38|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:b1b65da7547ca72713da2e38|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:bdd7ec70c88730d48163648e|1D",
+      "ticker": "00830",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:bdd7ec70c88730d48163648e|3D",
+      "ticker": "00830",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:bdd7ec70c88730d48163648e|5D",
+      "ticker": "00830",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:cef6451a88377bbddf804b69|20D",
+      "ticker": "5371",
+      "horizon": "20D",
+      "classification": "SECURITY_SPECIFIC_DATA_GAP_REVIEW_REQUIRED",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "REVIEW_HOLD",
+      "reason": "Provider returned the security, but the required maturity path was incomplete; preserve unresolved and require review."
+    },
+    {
+      "identity": "DERIVED:d149e39240c04dc37eadf1cb|10D",
+      "ticker": "00632R",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:d149e39240c04dc37eadf1cb|1D",
+      "ticker": "00632R",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:d149e39240c04dc37eadf1cb|20D",
+      "ticker": "00632R",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:d149e39240c04dc37eadf1cb|3D",
+      "ticker": "00632R",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "DERIVED:d149e39240c04dc37eadf1cb|5D",
+      "ticker": "00632R",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "LINE:7e091d5ee36c1b195b33e2da9547a188242f13c87acbe2cf2c62a90d3d8ab701:00631L:W01-SIG-BUY-V1|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "LINE:7e091d5ee36c1b195b33e2da9547a188242f13c87acbe2cf2c62a90d3d8ab701:00631L:W01-SIG-BUY-V1|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "LINE:7e091d5ee36c1b195b33e2da9547a188242f13c87acbe2cf2c62a90d3d8ab701:00631L:W01-SIG-BUY-V1|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "LINE:edfb905c2c81f15cde4d830bc7019314ddf53e27074e49af3d1be747ff1f7c8e:00830:W01-SIG-BUY-V1|1D",
+      "ticker": "00830",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "m20260814-03|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "m20260814-03|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "m20260814-03|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "m20260814-03|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-762e6cafc6|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-762e6cafc6|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-762e6cafc6|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-762e6cafc6|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-eb5f74252e|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-eb5f74252e|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-eb5f74252e|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-eb5f74252e|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-ebb81f7736|10D",
+      "ticker": "00752",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-ebb81f7736|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-ebb81f7736|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "md0821-ebb81f7736|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0094f842cadf|10D",
+      "ticker": "00752",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0094f842cadf|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0094f842cadf|20D",
+      "ticker": "00752",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0094f842cadf|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0094f842cadf|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-031534150661|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-031534150661|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-031534150661|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-031534150661|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-031534150661|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-05f15b2cb58d|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-05f15b2cb58d|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-05f15b2cb58d|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-05f15b2cb58d|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-05f15b2cb58d|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0af44f874fd0|10D",
+      "ticker": "00752",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0af44f874fd0|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0af44f874fd0|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-0af44f874fd0|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-16b9f05b126e|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-16b9f05b126e|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-16b9f05b126e|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-16b9f05b126e|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-16b9f05b126e|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-1d61c47a5b89|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-1d61c47a5b89|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-1d61c47a5b89|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-1d61c47a5b89|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-1d61c47a5b89|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-245c3907f25b|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-245c3907f25b|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-245c3907f25b|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-245c3907f25b|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-31e97a98806a|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-31e97a98806a|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-31e97a98806a|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-31e97a98806a|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-4d8ebf8125cd|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-4d8ebf8125cd|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-4d8ebf8125cd|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-4d8ebf8125cd|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-52b27df888e3|10D",
+      "ticker": "00663L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-52b27df888e3|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-52b27df888e3|20D",
+      "ticker": "00663L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-52b27df888e3|3D",
+      "ticker": "00663L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-52b27df888e3|5D",
+      "ticker": "00663L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-592ee669fb11|10D",
+      "ticker": "00752",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-592ee669fb11|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-592ee669fb11|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-592ee669fb11|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-5fc0e8693ad9|10D",
+      "ticker": "00752",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-5fc0e8693ad9|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-5fc0e8693ad9|20D",
+      "ticker": "00752",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-5fc0e8693ad9|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-5fc0e8693ad9|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-61376f69ddb8|10D",
+      "ticker": "00663L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-61376f69ddb8|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-61376f69ddb8|20D",
+      "ticker": "00663L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-61376f69ddb8|3D",
+      "ticker": "00663L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-61376f69ddb8|5D",
+      "ticker": "00663L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-78fda81f439f|10D",
+      "ticker": "00663L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-78fda81f439f|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-78fda81f439f|20D",
+      "ticker": "00663L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-78fda81f439f|3D",
+      "ticker": "00663L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-78fda81f439f|5D",
+      "ticker": "00663L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-935ab35f5c84|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-935ab35f5c84|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-935ab35f5c84|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-935ab35f5c84|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-935ab35f5c84|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-980de88aeedb|10D",
+      "ticker": "00663L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-980de88aeedb|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-980de88aeedb|3D",
+      "ticker": "00663L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-980de88aeedb|5D",
+      "ticker": "00663L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-9b10214f423e|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-9b10214f423e|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-9b10214f423e|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-9b10214f423e|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-9b10214f423e|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a3a479cf7715|10D",
+      "ticker": "00663L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a3a479cf7715|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a3a479cf7715|3D",
+      "ticker": "00663L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a3a479cf7715|5D",
+      "ticker": "00663L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a6bcdfba2704|1D",
+      "ticker": "00752",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a6bcdfba2704|3D",
+      "ticker": "00752",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a6bcdfba2704|5D",
+      "ticker": "00752",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a711f2cbfbfa|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a711f2cbfbfa|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a711f2cbfbfa|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a711f2cbfbfa|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-a711f2cbfbfa|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-c5adb5927179|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-c5adb5927179|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-c5adb5927179|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-c5adb5927179|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-c5adb5927179|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-ddf82038c1a3|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-ddf82038c1a3|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-ddf82038c1a3|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-ddf82038c1a3|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-ddf82038c1a3|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e6f653662986|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e6f653662986|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e6f653662986|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e6f653662986|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e6f653662986|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e875ba24c78b|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e875ba24c78b|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e875ba24c78b|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e875ba24c78b|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-e875ba24c78b|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f51b79d80b8a|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f51b79d80b8a|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f51b79d80b8a|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f51b79d80b8a|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f51b79d80b8a|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f562a6fd9b86|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f562a6fd9b86|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f562a6fd9b86|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f562a6fd9b86|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-f562a6fd9b86|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-fe694e6c75d7|10D",
+      "ticker": "00631L",
+      "horizon": "10D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-fe694e6c75d7|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-fe694e6c75d7|20D",
+      "ticker": "00631L",
+      "horizon": "20D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-fe694e6c75d7|3D",
+      "ticker": "00631L",
+      "horizon": "3D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "mh2026-fe694e6c75d7|5D",
+      "ticker": "00631L",
+      "horizon": "5D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "ms-3ec82b636ba1d95799593114|1D",
+      "ticker": "00635U",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "ms-5facf04d264fb6d19c8fb99f|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "ms-8089cf12e87d4517b0b65a64|1D",
+      "ticker": "00830",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "ms-bd717fa9b6f50ecbac6da683|1D",
+      "ticker": "00631L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    },
+    {
+      "identity": "ms-e93fd12bc8e8920bb3f0814f|1D",
+      "ticker": "00663L",
+      "horizon": "1D",
+      "classification": "KNOWN_UNSUPPORTED_INSTRUMENT",
+      "retryable": false,
+      "research_eligible": false,
+      "retry_state": "TERMINAL_EXCLUDED",
+      "reason": "Current production market-data adapter returned HTTP 400 for this ETF/special instrument class; excluded fail-closed without provider migration."
+    }
+  ],
+  "artifact_id": "W01_V112_OUTCOME_UNRESOLVED_2026-09-10",
+  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation"
+}

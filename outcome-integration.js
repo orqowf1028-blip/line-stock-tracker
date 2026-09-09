@@ -2,8 +2,8 @@
   'use strict';
 
   const EXPECTED_ROWS = 18576;
-  const EXPECTED_READY = 2595;
-  const EXPECTED_HASH = '470b9a4ba1adbad0cd6b8da6430e4b518de5b1f6411d1afd96ed62e658738e90';
+  const EXPECTED_READY = 3362;
+  const EXPECTED_HASH = '4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86';
   let manifestPromise;
   let storePromise;
 
@@ -73,12 +73,15 @@
   }
 
   const baseBuildXlsxWorkbook = window.buildXlsxWorkbook;
-  window.buildXlsxWorkbook = async function buildV16XlsxWorkbook() {
+  window.buildXlsxWorkbook = async function buildV112XlsxWorkbook() {
     const [workbook, store, manifest] = await Promise.all([baseBuildXlsxWorkbook(), loadStore(), loadManifest()]);
     addOutcomesSheet(workbook, store);
     const info = workbook.getWorksheet('Export_Info');
+    info.eachRow(row => {
+      if (row.getCell(1).value === 'W01 version') row.getCell(2).value = 'W01 v1.12 — Weekly Intelligence Foundation';
+    });
     info.addRows([
-      ['Formal version', 'W01 v1.6 — Outcome Incremental Maturity & Update Monitor'],
+      ['Formal version', 'W01 v1.12 — Weekly Intelligence Foundation'],
       ['Outcome calculation_version', manifest.calculation_version],
       ['Outcome row count', manifest.outcome_rows],
       ['Outcome READY', manifest.by_status.READY],
@@ -89,12 +92,13 @@
       ['Outcome retry rows', manifest.retry_queue_rows],
       ['Outcome semantic hash', manifest.semantic_hash],
       ['Outcome price basis', `${store.price_adjustment_type}; corporate actions ${store.corporate_action_status}`],
-      ['Outcome limitation', 'Benchmark/sector benchmark unsupported; missing price/date states remain explicit']
+      ['Outcome limitation', '241 special-instrument rows are known unsupported; 1 row (5371) remains review-required'],
+      ['Research Gate', 'NOT_READY_SAMPLE; Teacher Alpha remains research-only and is not an investment recommendation']
     ]);
     return workbook;
   };
 
-  window.downloadXlsx = async function downloadV16Xlsx() {
+  window.downloadXlsx = async function downloadV112Xlsx() {
     saveEditedNotes();
     const button = document.querySelector('#xlsxButton');
     const status = document.querySelector('#xlsxStatus');

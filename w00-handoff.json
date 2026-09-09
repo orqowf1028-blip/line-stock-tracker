@@ -1,0 +1,18 @@
+{
+  "priority": "P1",
+  "work": "W01",
+  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
+  "formal_commit_source": "/api/release",
+  "current_status": "Production GO pending deployment verification",
+  "working_change": "None / next candidate not started",
+  "status_next": "Maintenance + Friday Live Weekly Cycle #1",
+  "access": "Direct / GitHub main",
+  "production": "https://line-stock-tracker-orqowf.pages.dev/",
+  "research_gate": "NOT_READY_SAMPLE",
+  "known_limitations": {
+    "unsupported_special_instrument_outcomes": 241,
+    "ticker_5371_review_rows": 1
+  },
+  "last_verified": "2026-09-10",
+  "contains_w08_private_data": false
+}

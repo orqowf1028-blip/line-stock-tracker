@@ -1,14 +1,18 @@
 {
-  "artifact_id": "W01_V16_FORMAL_OUTCOME_STORE_2026-09-07",
-  "formal_candidate_version": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
-  "baseline_commit": "0bbd94811cd38a647e83896501ceb6af94daa5f2",
+  "artifact_id": "W01_V112_FORMAL_OUTCOME_MANIFEST_2026-09-10",
+  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
+  "release_date": "2026-09-10",
+  "rollback_version": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
+  "rollback_commit": "f02e7fe1309e502d987b1b9509ef22cfc01670de",
+  "release_commit_source": "/api/release",
   "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
-  "computed_at": "2026-09-07T15:45:51.147Z",
+  "computed_at": "2026-09-08T23:01:23.995Z",
+  "last_outcome_update": "2026-09-08T23:01:23.995Z",
   "price_cutoff_date": "2026-09-07",
   "canonical_events": 2322,
   "evidence_rows": 2557,
   "outcome_rows": 18576,
-  "semantic_hash": "470b9a4ba1adbad0cd6b8da6430e4b518de5b1f6411d1afd96ed62e658738e90",
+  "semantic_hash": "4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86",
   "price_adjustment_type": "RAW_UNADJUSTED",
   "corporate_action_status": "NOT_VERIFIED",
   "by_horizon": {
@@ -18,8 +22,8 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 4,
-        "PRICE_DATA_MISSING": 246,
-        "READY": 653
+        "PRICE_DATA_MISSING": 58,
+        "READY": 841
       }
     },
     "3D": {
@@ -28,8 +32,8 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 90,
-        "PRICE_DATA_MISSING": 222,
-        "READY": 591
+        "PRICE_DATA_MISSING": 52,
+        "READY": 761
       }
     },
     "5D": {
@@ -38,8 +42,8 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 135,
-        "PRICE_DATA_MISSING": 220,
-        "READY": 548
+        "PRICE_DATA_MISSING": 52,
+        "READY": 716
       }
     },
     "10D": {
@@ -48,8 +52,8 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 249,
-        "PRICE_DATA_MISSING": 187,
-        "READY": 467
+        "PRICE_DATA_MISSING": 46,
+        "READY": 608
       }
     },
     "20D": {
@@ -58,8 +62,8 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 481,
-        "PRICE_DATA_MISSING": 130,
-        "READY": 292
+        "PRICE_DATA_MISSING": 34,
+        "READY": 388
       }
     },
     "60D": {
@@ -68,8 +72,7 @@
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
         "NOT_MATURED": 858,
-        "PRICE_DATA_MISSING": 4,
-        "READY": 41
+        "READY": 45
       }
     },
     "120D": {
@@ -95,56 +98,24 @@
     "DATE_UNRESOLVED": 11320,
     "NOT_ELIGIBLE": 32,
     "NOT_MATURED": 3620,
-    "PRICE_DATA_MISSING": 1009,
-    "READY": 2595
+    "PRICE_DATA_MISSING": 242,
+    "READY": 3362
   },
-  "release_contract": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
   "store_file": "outcome-store.json",
-  "store_sha256": "2d701a506fd11505090540ee8f5e209c645bb6c0785b7d6630cd3b4adc69ac06",
-  "store_bytes": 18042690,
+  "store_sha256": "38188e120e8432b70b2c4027ef5e66db396a2a1e3fc7f4e048d78c4c9b1f0e1e",
+  "store_bytes": 19408126,
   "deployment_state_source": "/api/release",
-  "last_outcome_update": "2026-09-07T15:45:51.147Z",
-  "run_health": "DEGRADED_EXTERNAL",
-  "retry_queue_rows": 1009,
-  "incremental_accounting": {
-    "mode": "APPLY",
-    "run_at": "2026-09-07T15:45:51.147Z",
-    "source_commit": "65b4c56e42e91f3d4615983477a2a20d77d1168b",
-    "price_cutoff_before": "2026-09-04",
-    "price_cutoff_after": "2026-09-07",
-    "current_outcome_total": 18576,
-    "current_ready_total": 2489,
-    "new_canonical_events_detected": 0,
-    "new_outcome_rows": 0,
-    "newly_matured_candidates": 163,
-    "retryable_missing_price_candidates": 969,
-    "recovered_retries": 8,
-    "failed_retries": 961,
-    "review_rows": 0,
-    "expected_outcome_delta": 0,
-    "actual_outcome_delta": 0,
-    "expected_ready_delta": 106,
-    "actual_ready_delta": 106,
-    "ready_drift_detected": 0,
-    "correction_candidates": 0,
-    "transitions": {
-      "NOT_MATURED->PRICE_DATA_MISSING": 48,
-      "NOT_MATURED->READY": 98,
-      "PRICE_DATA_MISSING->READY": 8
-    },
-    "duplicate_outcomes": 0,
-    "anomalies": 0,
-    "invariant_validation": "PASS",
-    "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
-    "final_outcome_total": 18576,
-    "final_ready_total": 2595,
-    "still_not_matured": 3620,
-    "price_data_missing": 1009,
-    "date_unresolved": 11320,
-    "not_eligible": 32,
-    "fetch_codes": 148,
-    "fetch_success": 55,
-    "fetch_failed": 94,
-    "run_health": "DEGRADED_EXTERNAL"
-  }
+  "run_health": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+  "retry_queue_rows": 0,
+  "unresolved_rows": 242,
+  "known_unsupported_instrument_rows": 241,
+  "review_required_rows": 1,
+  "research_gate": "NOT_READY_SAMPLE",
+  "recovered_ready_retained": 767,
+  "ready_baseline": 3362,
+  "legitimate_release_maturity_delta": 0,
+  "ready_drift": 0,
+  "duplicate_outcome_identities": 0,
+  "anomalies": 0,
+  "loto_self_contamination": 0
 }

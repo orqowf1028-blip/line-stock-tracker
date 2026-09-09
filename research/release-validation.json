@@ -1,0 +1,350 @@
+{
+  "artifact_id": "W01_V111_RELEASE_CANDIDATE_VALIDATION_0909",
+  "run_id": "W01_V111_RELEASE_CANDIDATE_2026-09-09",
+  "as_of": "2026-09-07",
+  "decision": "RELEASE_CANDIDATE_READY",
+  "health_state": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+  "production_changed": false,
+  "github_changed": false,
+  "cloudflare_changed": false,
+  "counts": {
+    "canonical": 2322,
+    "evidence": 2557,
+    "outcomes": 18576,
+    "formal_ready": 2595,
+    "candidate_ready": 3362,
+    "newly_ready": 767,
+    "unresolved": {
+      "total": 242,
+      "known_unsupported_instrument": 241,
+      "review_required": 1,
+      "retryable_transient": 0,
+      "permanent_unavailable": 0,
+      "unknown": 0,
+      "research_eligible": 0
+    }
+  },
+  "versions": {
+    "candidate_version": "W01 v1.11 Candidate — Production Integration & Weekly Operations Release Candidate",
+    "formal_version_unchanged": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
+    "formal_commit": "f02e7fe1309e502d987b1b9509ef22cfc01670de",
+    "canonical_contract": "W01_V1.4_WEEKLY_RECONCILIATION",
+    "teacher_registry": "1.0",
+    "signal_registry": "1.0",
+    "outcome": "W01_OUTCOME_V1.0.0-SHADOW",
+    "scorecard": "W01_SCORECARD_V1.1.0-CANDIDATE",
+    "sufficiency": "W01_SUFFICIENCY_V1.0.0-CANDIDATE",
+    "teacher_alpha": "W01_TEACHER_ALPHA_V0.1.0-RESEARCH",
+    "peer_baseline": "W01_LOTO_PEER_BASELINE_V0.1.0-RESEARCH",
+    "temporal_split": "W01_ALPHA_TEMPORAL_SPLIT_V0.1.0-RESEARCH",
+    "weekly_intelligence": "W01_WEEKLY_INTELLIGENCE_V0.1.0-CANDIDATE",
+    "maturity_monitor": "W01_RESEARCH_MATURITY_MONITOR_V0.1.0-CANDIDATE",
+    "price_recovery": "W01_PRICE_RECOVERY_V1.10"
+  },
+  "gates": {
+    "formal_counts_match": true,
+    "recovered_delta_exact": true,
+    "unresolved_exact": true,
+    "prior_ready_immutable": true,
+    "duplicate_outcome_identities_zero": true,
+    "as_of_safe": true,
+    "hierarchy_incremental_full_equivalent": true,
+    "alpha_incremental_full_equivalent": true,
+    "normal_week_incremental_full_equivalent": true,
+    "hierarchy_anomalies_zero": true,
+    "alpha_anomalies_zero": true,
+    "loto_self_inclusion_zero": true,
+    "second_run_zero_delta": true,
+    "checkpoint_crash_resume": true,
+    "weekly_scenarios": true,
+    "exact_accounting": true,
+    "research_gate_unchanged": true,
+    "ui_xlsx_contract": true,
+    "w08_not_accessed": true,
+    "production_not_modified": true
+  },
+  "weekly_incremental_cost_target": {
+    "pass": true,
+    "normal_combined_speedup": 1.48,
+    "requirement": "normal weekly incremental job should be materially cheaper than full reference rebuild"
+  },
+  "exact_accounting": {
+    "status": "HEALTHY",
+    "mismatches": []
+  },
+  "ready_immutability": {
+    "checked": 2595,
+    "drift": 0,
+    "drift_ids": []
+  },
+  "as_of_safety": {
+    "status": "HEALTHY",
+    "future_ready_rows": []
+  },
+  "hierarchy": {
+    "semantic_hash": "01c8ae7193a4b0213783da4f3f7bff48f43f08a58aa77fcaa7fca21f8092863a",
+    "incremental_full_equivalent": true,
+    "recomputed_raw_cells": 510,
+    "changed_cells_by_level": {
+      "l1": 27,
+      "l1_coarse": 12,
+      "l2": 191,
+      "l3": 280
+    },
+    "counts": {
+      "l1": 32,
+      "l1_coarse": 14,
+      "l2": 353,
+      "l3": 543
+    }
+  },
+  "alpha": {
+    "semantic_hash": "dd695b2f974927ba67546fd8baae3c5032aafbf5f591d3108a06aa77f6cc7267",
+    "incremental_full_equivalent": true,
+    "recomputed_raw_cells": 886,
+    "changed_cells": 896,
+    "total_cells": 896,
+    "loto_self_inclusion": 0
+  },
+  "maturity": {
+    "monitor_version": "W01_RESEARCH_MATURITY_MONITOR_V0.1.0-CANDIDATE",
+    "run_id": "W01_V111_RELEASE_CANDIDATE_2026-09-09",
+    "as_of": "2026-09-07",
+    "metrics": {
+      "canonical_count": 2322,
+      "evidence_count": 2557,
+      "outcome_count": 18576,
+      "ready_count": 3362,
+      "registry_safe_ready": 3084,
+      "l1_count": 32,
+      "l2_count": 353,
+      "l3_count": 543,
+      "hierarchical_usable_coverage": 69.98,
+      "alpha_cell_count": 896,
+      "dual_gate_pass_count": 96,
+      "positive_candidate_count": 34,
+      "negative_candidate_count": 43,
+      "stronger_candidate_count": 0,
+      "eligible_teacher_count": 70,
+      "evaluable_teacher_count": 15,
+      "horizon_consistency_eligible_count": 147,
+      "temporal_stability_eligible_count": 68,
+      "valid_loto_baseline_cells": 892,
+      "supported_loto_baseline_cells": 562,
+      "baseline_quality_distribution": {
+        "DESCRIPTIVE_BASELINE": 270,
+        "INSUFFICIENT": 330,
+        "MODERATE_BASELINE": 41,
+        "NO_BASELINE": 4,
+        "STRONGER_BASELINE": 251
+      },
+      "sample_sufficiency_distribution": {
+        "DESCRIPTIVE": 112,
+        "EARLY_PATTERN": 210,
+        "INSUFFICIENT": 523,
+        "MODERATE_EVIDENCE": 46,
+        "STRONGER_EVIDENCE": 5
+      },
+      "stronger_candidate_teacher_count": 0
+    },
+    "walk_forward_readiness": {
+      "state": "NOT_READY_SAMPLE",
+      "reasons": [
+        "NO_STRONGER_RESEARCH_CANDIDATE",
+        "DUAL_GATE_PASS_96_OF_896",
+        "EVALUABLE_TEACHERS_15_OF_70"
+      ],
+      "dimensions": {
+        "sample": false,
+        "baseline": true,
+        "temporal_depth": true,
+        "horizon_consistency": true,
+        "teacher_coverage": true
+      }
+    },
+    "health_state": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+    "stage_health": {
+      "canonical": "HEALTHY_NO_CHANGE",
+      "evidence": "HEALTHY_NO_CHANGE",
+      "outcome": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+      "scorecard": "HEALTHY",
+      "teacher_alpha": "HEALTHY",
+      "maturity_monitor": "HEALTHY"
+    },
+    "calculation_versions": {
+      "canonical_contract": "W01_V1.4_WEEKLY_RECONCILIATION",
+      "outcome_calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
+      "scorecard_version": "W01_SCORECARD_V1.1.0-CANDIDATE",
+      "sufficiency_rule_version": "W01_SUFFICIENCY_V1.0.0-CANDIDATE",
+      "teacher_alpha_version": "W01_TEACHER_ALPHA_V0.1.0-RESEARCH",
+      "peer_baseline_version": "W01_LOTO_PEER_BASELINE_V0.1.0-RESEARCH",
+      "maturity_monitor_version": "W01_RESEARCH_MATURITY_MONITOR_V0.1.0-CANDIDATE"
+    },
+    "input_hashes": {
+      "outcome": "4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86",
+      "scorecard": "01c8ae7193a4b0213783da4f3f7bff48f43f08a58aa77fcaa7fca21f8092863a",
+      "teacher_alpha": "dd695b2f974927ba67546fd8baae3c5032aafbf5f591d3108a06aa77f6cc7267"
+    },
+    "maturity_snapshot_id": "W01-MAT-0f2e32c8cf49461e3714"
+  },
+  "maturity_delta": {
+    "comparison_basis": "W01-MAT-228a9748b3f906830199",
+    "numeric": {
+      "canonical_count": 0,
+      "evidence_count": 0,
+      "outcome_count": 0,
+      "ready_count": 767,
+      "registry_safe_ready": 706,
+      "l1_count": 0,
+      "l2_count": 17,
+      "l3_count": 45,
+      "hierarchical_usable_coverage": 6.930000000000007,
+      "alpha_cell_count": 62,
+      "dual_gate_pass_count": 53,
+      "positive_candidate_count": 18,
+      "negative_candidate_count": 25,
+      "stronger_candidate_count": 0,
+      "eligible_teacher_count": 0,
+      "evaluable_teacher_count": 9,
+      "horizon_consistency_eligible_count": 77,
+      "temporal_stability_eligible_count": 36,
+      "valid_loto_baseline_cells": 62,
+      "supported_loto_baseline_cells": 197,
+      "stronger_candidate_teacher_count": 0
+    },
+    "readiness_from": "NOT_READY_SAMPLE",
+    "readiness_to": "NOT_READY_SAMPLE",
+    "health_from": "DEGRADED_EXTERNAL",
+    "health_to": "HEALTHY_WITH_KNOWN_LIMITATIONS"
+  },
+  "unresolved_policy": {
+    "total": 242,
+    "known_unsupported_instrument": 241,
+    "review_required": 1,
+    "retryable_transient": 0,
+    "permanent_unavailable": 0,
+    "unknown": 0,
+    "research_eligible": 0
+  },
+  "scenario_tests": {
+    "fixtures": {
+      "zero_delta_week": true,
+      "time_maturity_week": true,
+      "new_signal_week": true,
+      "new_teacher_week": true,
+      "provider_outage_bounded_retry": true,
+      "unsupported_instrument_terminal": true,
+      "accounting_mismatch_fail_closed": true
+    },
+    "pass": true
+  },
+  "crash_resume_tests": {
+    "scenarios": [
+      {
+        "crash_after_stage": "BEFORE_START",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "canonical",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "evidence",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "outcome",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "price_recovery",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "scorecard",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "teacher_alpha",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "maturity",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "ui_xlsx",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      },
+      {
+        "crash_after_stage": "release_snapshot",
+        "resume_plan_match": true,
+        "completed_stage_idempotent": true
+      }
+    ],
+    "pass": true
+  },
+  "second_run": {
+    "canonical_delta": 0,
+    "evidence_delta": 0,
+    "outcome_delta": 0,
+    "ready_delta": 0,
+    "scorecard_changed_cells": 0,
+    "alpha_changed_cells": 0,
+    "pass": true
+  },
+  "ui_xlsx": {
+    "app_embeds_canonical_initial_data": true,
+    "index_loads_app": true,
+    "index_loads_outcome_integration": true,
+    "signals_sheet_contract": true,
+    "evidence_sheet_contract": true,
+    "export_info_contract": true,
+    "outcomes_sheet_contract": true,
+    "notes_local_storage_contract": true,
+    "supabase_notes_contract": true,
+    "pass": true
+  },
+  "performance": {
+    "hierarchy_incremental_ms": 246.911,
+    "hierarchy_full_reference_ms": 194.794,
+    "hierarchy_speedup": 0.79,
+    "hierarchy_recomputed_raw_cells": 510,
+    "hierarchy_changed_cells": 510,
+    "alpha_incremental_ms": 2043.886,
+    "alpha_full_reference_ms": 2335.036,
+    "alpha_speedup": 1.14,
+    "alpha_scanned_outcomes": 17896,
+    "alpha_recomputed_raw_cells": 886,
+    "alpha_changed_cells": 896,
+    "normal_week_fixture_rows": 8,
+    "normal_week_hierarchy_incremental_ms": 113.808,
+    "normal_week_hierarchy_full_ms": 162.874,
+    "normal_week_alpha_incremental_ms": 1038.734,
+    "normal_week_alpha_full_ms": 1543.307,
+    "normal_week_combined_speedup": 1.48,
+    "normal_week_alpha_diff_count": 0,
+    "normal_week_alpha_diff_sample": [],
+    "known_hotspot": "Alpha temporal/profile validation still scans the registry-safe candidate Outcome subset; correctness is preserved and no whole Outcome rebuild occurs."
+  },
+  "component_hashes": {
+    "formal_outcome": "15569e9982d44339fffc79840772309291cc7500eb7513908c7bfb03bda8a9a8",
+    "candidate_outcome": "5e17d1bcdd7eca876769f6b2c23052bf8712dbad620e96b84c55b593b83abe44",
+    "teacher_registry": "49c41d7e9f510620b878a143c65df2a1f0f092a406b8d432de88a78b070d6af6",
+    "signal_registry": "6671f3d68c169a609ac6a412685e39eb0b4a486fb9b4a35f58250c3aa4afa92e",
+    "hierarchy_engine": "9b5981065ec9f885404a22da846050c1ce5faf6ef4ad471ed1afd27cb3769282",
+    "alpha_engine": "3dc08f42b75870b81653f41139a1a60a69c47d18607e22c4de0924f0ad1575a6",
+    "weekly_engine": "69f1a9aeedb2f23f832773e9c2a5df0786b7a0d6a3a5660a60af58f38df54bf4",
+    "orchestration_engine": "c49f11398fe6caff91555ddf6c833518c81c21bd8554aab4e1e486fc6235291a"
+  },
+  "runtime_ms": 28762.483
+}

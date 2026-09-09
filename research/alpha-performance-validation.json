@@ -1,0 +1,223 @@
+{
+  "artifact_id": "W01_V1.11.1_ALPHA_PERFORMANCE_VALIDATION_0909",
+  "version": "W01 v1.11.1 Candidate",
+  "cases": [
+    {
+      "name": "ZERO_DELTA",
+      "delta_rows": 0,
+      "incremental_ms": 1.629,
+      "full_ms": null,
+      "ratio": 0,
+      "total_cells": 896,
+      "raw_cells": 0,
+      "temporal_cells": 0,
+      "invalidation_ratio": 0,
+      "semantic_difference": 0,
+      "numeric_difference": 0,
+      "loto_contamination": 0,
+      "profile": {
+        "phase_ms": {
+          "zero_delta_validation": 0.69
+        },
+        "total_ms": 0.708
+      },
+      "index": {
+        "exact_keys": 0,
+        "coarse_keys": 0,
+        "temporal_keys": 0,
+        "alpha_cells": 896,
+        "zero_delta_fast_path": true
+      }
+    },
+    {
+      "name": "SMALL_WEEKLY_DELTA",
+      "delta_rows": 8,
+      "incremental_ms": 1309.025,
+      "full_ms": 1630.135,
+      "ratio": 0.803,
+      "total_cells": 834,
+      "raw_cells": 248,
+      "temporal_cells": 481,
+      "invalidation_ratio": 0.5767,
+      "semantic_difference": 0,
+      "numeric_difference": 0,
+      "loto_contamination": 0,
+      "profile": {
+        "phase_ms": {
+          "outcome_selection": 6.527,
+          "group_index_build": 34.516,
+          "dependency_index_build": 1.226,
+          "invalidation_discovery": 0.173,
+          "raw_and_loto_recompute": 365.485,
+          "new_cell_reconcile": 0.224,
+          "cascade_clone": 1.46,
+          "horizon_consistency": 0.578,
+          "signal_consistency": 0.426,
+          "temporal_stability": 21.366,
+          "candidate_classification": 0.223,
+          "integrity_checks": 6.204,
+          "teacher_coverage": 16.436,
+          "serialization_hashing": 852.902,
+          "summary": 1.016,
+          "semantic_diff": 0.122
+        },
+        "total_ms": 1308.977
+      },
+      "index": {
+        "exact_keys": 32,
+        "coarse_keys": 14,
+        "temporal_keys": 14,
+        "alpha_cells": 834,
+        "zero_delta_fast_path": false
+      }
+    },
+    {
+      "name": "MODERATE_WEEKLY_DELTA",
+      "delta_rows": 64,
+      "incremental_ms": 1426.078,
+      "full_ms": 1575.452,
+      "ratio": 0.9052,
+      "total_cells": 838,
+      "raw_cells": 792,
+      "temporal_cells": 823,
+      "invalidation_ratio": 0.9821,
+      "semantic_difference": 0,
+      "numeric_difference": 0,
+      "loto_contamination": 0,
+      "profile": {
+        "phase_ms": {
+          "outcome_selection": 3.989,
+          "group_index_build": 28.447,
+          "dependency_index_build": 0.833,
+          "invalidation_discovery": 0.573,
+          "raw_and_loto_recompute": 668.115,
+          "new_cell_reconcile": 0.273,
+          "cascade_clone": 1.956,
+          "horizon_consistency": 0.548,
+          "signal_consistency": 1.52,
+          "temporal_stability": 40.09,
+          "candidate_classification": 0.306,
+          "integrity_checks": 4.025,
+          "teacher_coverage": 14.545,
+          "serialization_hashing": 659.521,
+          "summary": 0.866,
+          "semantic_diff": 0.217
+        },
+        "total_ms": 1426.061
+      },
+      "index": {
+        "exact_keys": 32,
+        "coarse_keys": 14,
+        "temporal_keys": 14,
+        "alpha_cells": 838,
+        "zero_delta_fast_path": false
+      }
+    },
+    {
+      "name": "TIME_MATURITY_ONLY_DELTA",
+      "delta_rows": 8,
+      "incremental_ms": 2552.358,
+      "full_ms": 2181.837,
+      "ratio": 1.1698,
+      "total_cells": 896,
+      "raw_cells": 520,
+      "temporal_cells": 724,
+      "invalidation_ratio": 0.808,
+      "semantic_difference": 0,
+      "numeric_difference": 0,
+      "loto_contamination": 0,
+      "profile": {
+        "phase_ms": {
+          "outcome_selection": 9.55,
+          "group_index_build": 64.78,
+          "dependency_index_build": 1.249,
+          "invalidation_discovery": 0.295,
+          "raw_and_loto_recompute": 1425.666,
+          "new_cell_reconcile": 0.634,
+          "cascade_clone": 6.642,
+          "horizon_consistency": 1.146,
+          "signal_consistency": 0.834,
+          "temporal_stability": 92.673,
+          "candidate_classification": 0.396,
+          "integrity_checks": 6.503,
+          "teacher_coverage": 14.178,
+          "serialization_hashing": 926.45,
+          "summary": 0.95,
+          "semantic_diff": 0.184
+        },
+        "total_ms": 2552.236
+      },
+      "index": {
+        "exact_keys": 32,
+        "coarse_keys": 14,
+        "temporal_keys": 14,
+        "alpha_cells": 896,
+        "zero_delta_fast_path": false
+      }
+    },
+    {
+      "name": "PRICE_RECOVERY_DELTA",
+      "delta_rows": 767,
+      "incremental_ms": 2015.135,
+      "full_ms": 2331.901,
+      "ratio": 0.8642,
+      "total_cells": 896,
+      "raw_cells": 886,
+      "temporal_cells": 892,
+      "invalidation_ratio": 0.9955,
+      "semantic_difference": 0,
+      "numeric_difference": 0,
+      "loto_contamination": 0,
+      "profile": {
+        "phase_ms": {
+          "outcome_selection": 4.179,
+          "group_index_build": 26.261,
+          "dependency_index_build": 0.933,
+          "invalidation_discovery": 5.304,
+          "raw_and_loto_recompute": 906.081,
+          "new_cell_reconcile": 0.243,
+          "cascade_clone": 2.44,
+          "horizon_consistency": 1.256,
+          "signal_consistency": 0.625,
+          "temporal_stability": 97.866,
+          "candidate_classification": 0.539,
+          "integrity_checks": 5.499,
+          "teacher_coverage": 16.152,
+          "serialization_hashing": 945.926,
+          "summary": 1.283,
+          "semantic_diff": 0.3
+        },
+        "total_ms": 2015.11
+      },
+      "index": {
+        "exact_keys": 32,
+        "coarse_keys": 14,
+        "temporal_keys": 14,
+        "alpha_cells": 896,
+        "zero_delta_fast_path": false
+      }
+    }
+  ],
+  "as_of_safety": true,
+  "cache_invalidation": {
+    "teacher_registry_change_fallback": true,
+    "signal_registry_change_fallback": true,
+    "outcome_calculation_change_fallback": true,
+    "scorecard_version_change_throws": true,
+    "sufficiency_version_change_throws": true,
+    "alpha_version_change_throws": true
+  },
+  "deterministic": true,
+  "idempotent": true,
+  "duplicate_alpha_cells": 0,
+  "fair_small_benchmark": {
+    "median_incremental_ms": 1144.212,
+    "median_full_ms": 1598.907,
+    "median_ratio": 0.7156,
+    "repetitions": 3
+  },
+  "performance_gate": true,
+  "structural_gate": true,
+  "all_correctness": true,
+  "total_runtime_ms": 39135.329
+}

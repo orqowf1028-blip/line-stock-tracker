@@ -1,0 +1,51 @@
+{
+  "checkpoint_version": "W01_V111_CHECKPOINT_V1",
+  "run_id": "W01_V111_RELEASE_CANDIDATE_2026-09-09",
+  "stages": {
+    "canonical": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "e6f7db63bc24274406cbccfbafa06d4b152083c8066c27329cf2948d1dfd3729"
+    },
+    "evidence": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "af6ba5c7d9c990e03aad364cdb3a1af3ab5e240829bc92695374856b0517b366"
+    },
+    "outcome": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "90480a10ce88c8147aef701cd42098dcf4fbf71c12ef90445955effb12925021"
+    },
+    "price_recovery": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "2cbf745f08ec0a0d3f9bc98d73bbc6ccb1da984a8061995d2abdbfbcb32ac158"
+    },
+    "scorecard": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "00a044e44a5315c18ce5d76bd9ffb7aa34ba18ddb90290f20b42bb58c0b1813e"
+    },
+    "teacher_alpha": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "3b32ec1c26cce7ae30d30d32a332ce1b33b507c2175fd976cd1ffb70141be00f"
+    },
+    "maturity": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "a7f93b510b7050cdb166d26bd01f988b06536f38e5a5b5164a4a34442faaaf82"
+    },
+    "ui_xlsx": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "4a441e0180ecfa1bea6956624429d87e88d4641b0829e99b8434e66ba824e868"
+    },
+    "release_snapshot": {
+      "status": "DONE",
+      "attempts": 1,
+      "semantic_hash": "282185f60fa8835c8300b81121727cf618737f787fde50be1785adcdf02accaa"
+    }
+  }
+}
