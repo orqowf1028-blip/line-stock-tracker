@@ -1,112 +1,112 @@
 {
-  "artifact_id": "W01_V112_FORMAL_OUTCOME_MANIFEST_2026-09-10",
+  "artifact_id": "W01_V112_WEEKLY_OUTCOME_MANIFEST_2026-09-12",
   "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
-  "release_date": "2026-09-10",
+  "release_date": "2026-09-12",
   "rollback_version": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
   "rollback_commit": "f02e7fe1309e502d987b1b9509ef22cfc01670de",
   "release_commit_source": "/api/release",
   "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
-  "computed_at": "2026-09-08T23:01:23.995Z",
-  "last_outcome_update": "2026-09-08T23:01:23.995Z",
-  "price_cutoff_date": "2026-09-07",
-  "canonical_events": 2322,
-  "evidence_rows": 2557,
-  "outcome_rows": 18576,
-  "semantic_hash": "4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86",
+  "computed_at": "2026-09-11T16:02:02.266Z",
+  "last_outcome_update": "2026-09-11T16:02:02.266Z",
+  "price_cutoff_date": "2026-09-11",
+  "canonical_events": 2611,
+  "evidence_rows": 2831,
+  "outcome_rows": 20536,
+  "semantic_hash": "e3a99641cc76c77fe4d4e85a75c574940685dd4a534238411ddb1a25570a0f52",
   "price_adjustment_type": "RAW_UNADJUSTED",
   "corporate_action_status": "NOT_VERIFIED",
   "by_horizon": {
     "1D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 4,
-        "PRICE_DATA_MISSING": 58,
-        "READY": 841
+        "NOT_MATURED": 69,
+        "PRICE_DATA_MISSING": 133,
+        "READY": 946
       }
     },
     "3D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 90,
-        "PRICE_DATA_MISSING": 52,
-        "READY": 761
+        "NOT_MATURED": 153,
+        "PRICE_DATA_MISSING": 121,
+        "READY": 874
       }
     },
     "5D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 135,
-        "PRICE_DATA_MISSING": 52,
-        "READY": 716
+        "NOT_MATURED": 257,
+        "PRICE_DATA_MISSING": 88,
+        "READY": 803
       }
     },
     "10D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 249,
-        "PRICE_DATA_MISSING": 46,
-        "READY": 608
+        "NOT_MATURED": 427,
+        "PRICE_DATA_MISSING": 66,
+        "READY": 655
       }
     },
     "20D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 481,
-        "PRICE_DATA_MISSING": 34,
-        "READY": 388
+        "NOT_MATURED": 645,
+        "PRICE_DATA_MISSING": 71,
+        "READY": 432
       }
     },
     "60D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 858,
-        "READY": 45
+        "NOT_MATURED": 1100,
+        "READY": 48
       }
     },
     "120D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 901,
+        "NOT_MATURED": 1146,
         "READY": 2
       }
     },
     "250D": {
-      "total": 2322,
+      "total": 2567,
       "by_status": {
         "DATE_UNRESOLVED": 1415,
         "NOT_ELIGIBLE": 4,
-        "NOT_MATURED": 902,
-        "READY": 1
+        "NOT_MATURED": 1146,
+        "READY": 2
       }
     }
   },
   "by_status": {
     "DATE_UNRESOLVED": 11320,
     "NOT_ELIGIBLE": 32,
-    "NOT_MATURED": 3620,
-    "PRICE_DATA_MISSING": 242,
-    "READY": 3362
+    "NOT_MATURED": 4943,
+    "PRICE_DATA_MISSING": 479,
+    "READY": 3762
   },
   "store_file": "outcome-store.json",
-  "store_sha256": "38188e120e8432b70b2c4027ef5e66db396a2a1e3fc7f4e048d78c4c9b1f0e1e",
-  "store_bytes": 19408126,
+  "store_sha256": "93b4df82b3853230fe5f1484155c9240bef26c4da205c7c274f3baf883e77b15",
+  "store_bytes": 21613608,
   "deployment_state_source": "/api/release",
-  "run_health": "HEALTHY_WITH_KNOWN_LIMITATIONS",
-  "retry_queue_rows": 0,
+  "run_health": "DEGRADED_EXTERNAL",
+  "retry_queue_rows": 479,
   "unresolved_rows": 242,
   "known_unsupported_instrument_rows": 241,
   "review_required_rows": 1,
@@ -117,5 +117,50 @@
   "ready_drift": 0,
   "duplicate_outcome_identities": 0,
   "anomalies": 0,
-  "loto_self_contamination": 0
+  "loto_self_contamination": 0,
+  "formal_candidate_version": "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
+  "release_contract": "W01 v1.12 — Weekly Intelligence Foundation",
+  "incremental_accounting": {
+    "mode": "APPLY",
+    "run_at": "2026-09-11T16:02:02.266Z",
+    "source_commit": "f93674bad8ee181572dc5a41da854f2d20e147de",
+    "price_cutoff_before": "2026-09-07",
+    "price_cutoff_after": "2026-09-11",
+    "current_outcome_total": 18576,
+    "current_ready_total": 3362,
+    "new_canonical_events_detected": 245,
+    "new_outcome_rows": 1960,
+    "newly_matured_candidates": 409,
+    "retryable_missing_price_candidates": 242,
+    "recovered_retries": 0,
+    "failed_retries": 242,
+    "review_rows": 0,
+    "expected_outcome_delta": 1960,
+    "actual_outcome_delta": 1960,
+    "expected_ready_delta": 400,
+    "actual_ready_delta": 400,
+    "ready_drift_detected": 0,
+    "correction_candidates": 0,
+    "transitions": {
+      "NEW->NOT_MATURED": 1678,
+      "NEW->PRICE_DATA_MISSING": 121,
+      "NEW->READY": 161,
+      "NOT_MATURED->PRICE_DATA_MISSING": 116,
+      "NOT_MATURED->READY": 239
+    },
+    "duplicate_outcomes": 0,
+    "anomalies": 0,
+    "invariant_validation": "PASS",
+    "calculation_version": "W01_OUTCOME_V1.0.0-SHADOW",
+    "final_outcome_total": 20536,
+    "final_ready_total": 3762,
+    "still_not_matured": 4943,
+    "price_data_missing": 479,
+    "date_unresolved": 11320,
+    "not_eligible": 32,
+    "fetch_codes": 198,
+    "fetch_success": 0,
+    "fetch_failed": 0,
+    "run_health": "DEGRADED_EXTERNAL"
+  }
 }

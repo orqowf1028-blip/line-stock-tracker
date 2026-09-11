@@ -1,9 +1,6 @@
 (function () {
   'use strict';
 
-  const EXPECTED_ROWS = 18576;
-  const EXPECTED_READY = 3362;
-  const EXPECTED_HASH = '4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86';
   let manifestPromise;
   let storePromise;
 
@@ -16,7 +13,9 @@
 
   function loadManifest() {
     manifestPromise ||= fetchJson('/outcome-manifest.json').then(manifest => {
-      if (manifest.outcome_rows !== EXPECTED_ROWS || manifest.by_status?.READY !== EXPECTED_READY || manifest.semantic_hash !== EXPECTED_HASH) {
+      if (manifest.formal_version !== 'W01 v1.12 — Weekly Intelligence Foundation' ||
+          !Number.isInteger(manifest.outcome_rows) || manifest.outcome_rows < 1 ||
+          !Number.isInteger(manifest.by_status?.READY) || !manifest.semantic_hash) {
         throw new Error('Outcome manifest reconciliation failed');
       }
       return manifest;
@@ -115,7 +114,8 @@
       link.download = `LINE_股市同學會_投資追蹤表_${stamp}.xlsx`;
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      status.textContent = `XLSX 已建立：${data.length} 筆訊號／${EXPECTED_ROWS} 筆 Outcomes`;
+      const manifest = await loadManifest();
+      status.textContent = `XLSX 已建立：${data.length} 筆訊號／${manifest.outcome_rows} 筆 Outcomes`;
     } catch (error) {
       status.textContent = `XLSX 匯出失敗：${error.message || error}`;
     } finally {

@@ -1,41 +1,41 @@
 {
   "monitor_version": "W01_RESEARCH_MATURITY_MONITOR_V0.1.0-CANDIDATE",
-  "run_id": "W01_V111_RELEASE_CANDIDATE_2026-09-09",
-  "as_of": "2026-09-07",
+  "run_id": "W01_V112_WEEKLY_INCREMENTAL_2026-09-11",
+  "as_of": "2026-09-11",
   "metrics": {
-    "canonical_count": 2322,
-    "evidence_count": 2557,
-    "outcome_count": 18576,
-    "ready_count": 3362,
-    "registry_safe_ready": 3084,
-    "l1_count": 32,
-    "l2_count": 353,
-    "l3_count": 543,
-    "hierarchical_usable_coverage": 69.98,
-    "alpha_cell_count": 896,
-    "dual_gate_pass_count": 96,
-    "positive_candidate_count": 34,
-    "negative_candidate_count": 43,
+    "canonical_count": 2611,
+    "evidence_count": 2831,
+    "outcome_count": 20536,
+    "ready_count": 3762,
+    "registry_safe_ready": 3467,
+    "l1_count": 34,
+    "l2_count": 400,
+    "l3_count": 607,
+    "hierarchical_usable_coverage": 73.81,
+    "alpha_cell_count": 1007,
+    "dual_gate_pass_count": 108,
+    "positive_candidate_count": 41,
+    "negative_candidate_count": 44,
     "stronger_candidate_count": 0,
     "eligible_teacher_count": 70,
     "evaluable_teacher_count": 15,
-    "horizon_consistency_eligible_count": 147,
-    "temporal_stability_eligible_count": 68,
-    "valid_loto_baseline_cells": 892,
-    "supported_loto_baseline_cells": 562,
+    "horizon_consistency_eligible_count": 157,
+    "temporal_stability_eligible_count": 79,
+    "valid_loto_baseline_cells": 999,
+    "supported_loto_baseline_cells": 679,
     "baseline_quality_distribution": {
-      "DESCRIPTIVE_BASELINE": 270,
-      "INSUFFICIENT": 330,
-      "MODERATE_BASELINE": 41,
-      "NO_BASELINE": 4,
-      "STRONGER_BASELINE": 251
+      "DESCRIPTIVE_BASELINE": 353,
+      "INSUFFICIENT": 320,
+      "MODERATE_BASELINE": 15,
+      "NO_BASELINE": 8,
+      "STRONGER_BASELINE": 311
     },
     "sample_sufficiency_distribution": {
-      "DESCRIPTIVE": 112,
-      "EARLY_PATTERN": 210,
-      "INSUFFICIENT": 523,
-      "MODERATE_EVIDENCE": 46,
-      "STRONGER_EVIDENCE": 5
+      "DESCRIPTIVE": 110,
+      "EARLY_PATTERN": 243,
+      "INSUFFICIENT": 596,
+      "MODERATE_EVIDENCE": 51,
+      "STRONGER_EVIDENCE": 7
     },
     "stronger_candidate_teacher_count": 0
   },
@@ -43,7 +43,7 @@
     "state": "NOT_READY_SAMPLE",
     "reasons": [
       "NO_STRONGER_RESEARCH_CANDIDATE",
-      "DUAL_GATE_PASS_96_OF_896",
+      "DUAL_GATE_PASS_108_OF_1007",
       "EVALUABLE_TEACHERS_15_OF_70"
     ],
     "dimensions": {
@@ -54,11 +54,11 @@
       "teacher_coverage": true
     }
   },
-  "health_state": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+  "health_state": "DEGRADED_EXTERNAL",
   "stage_health": {
-    "canonical": "HEALTHY_NO_CHANGE",
-    "evidence": "HEALTHY_NO_CHANGE",
-    "outcome": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+    "canonical": "HEALTHY",
+    "evidence": "HEALTHY",
+    "outcome": "DEGRADED_EXTERNAL",
     "scorecard": "HEALTHY",
     "teacher_alpha": "HEALTHY",
     "maturity_monitor": "HEALTHY"
@@ -73,9 +73,9 @@
     "maturity_monitor_version": "W01_RESEARCH_MATURITY_MONITOR_V0.1.0-CANDIDATE"
   },
   "input_hashes": {
-    "outcome": "4f69b4d4984e3a95bb1b2c03df60a335ff6c349222881a2c6c1a3f429337ce86",
-    "scorecard": "01c8ae7193a4b0213783da4f3f7bff48f43f08a58aa77fcaa7fca21f8092863a",
-    "teacher_alpha": "dd695b2f974927ba67546fd8baae3c5032aafbf5f591d3108a06aa77f6cc7267"
+    "outcome": "e3a99641cc76c77fe4d4e85a75c574940685dd4a534238411ddb1a25570a0f52",
+    "scorecard": "cf5bc552fb172f377063a2981427c6fc2fc677632f559b121305a78750ec5ee0",
+    "teacher_alpha": "28e6808efdc75162c627e6d4e71c0da4475b8649dccb66f2fba7b98babb84ef8"
   },
-  "maturity_snapshot_id": "W01-MAT-0f2e32c8cf49461e3714"
+  "maturity_snapshot_id": "W01-MAT-b0f3e989e0692ff5610d"
 }

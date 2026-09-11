@@ -72,8 +72,8 @@
       "canonical_name": "何丞唐",
       "display_name": "何丞唐",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -95,7 +95,7 @@
         "何基鼎專"
       ],
       "first_seen": "2026-07-02",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -117,7 +117,7 @@
       "display_name": "余正君",
       "aliases": [],
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -137,7 +137,7 @@
       "display_name": "倫元周贏",
       "aliases": [],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -154,8 +154,8 @@
       "canonical_name": "劉青峻",
       "display_name": "劉青峻",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -193,7 +193,7 @@
       "display_name": "周佳和",
       "aliases": [],
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -213,7 +213,7 @@
       "display_name": "周豪佳",
       "aliases": [],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-08",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -269,7 +269,7 @@
       "display_name": "啟發郭憲政",
       "aliases": [],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "UNKNOWN",
       "source_identifiers": {
         "production_display_labels": [
@@ -286,8 +286,8 @@
       "canonical_name": "容逸燊",
       "display_name": "容逸燊",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -307,7 +307,7 @@
       "display_name": "廖祥安",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-07",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -327,7 +327,7 @@
       "display_name": "張嘉軒",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-08",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -347,7 +347,7 @@
       "display_name": "張宇明",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -367,7 +367,7 @@
       "display_name": "張家豪",
       "aliases": [],
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -386,8 +386,8 @@
       "canonical_name": "張貽程",
       "display_name": "張貽程",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -427,7 +427,7 @@
       "display_name": "徐紹軒",
       "aliases": [],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -447,7 +447,7 @@
       "display_name": "未標示",
       "aliases": [],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "UNKNOWN",
       "source_identifiers": {
         "production_display_labels": [
@@ -486,7 +486,7 @@
         "李冠嶶特"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -524,8 +524,8 @@
       "canonical_name": "李春生",
       "display_name": "李春生",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -545,7 +545,7 @@
       "display_name": "李永年",
       "aliases": [],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-08",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -602,8 +602,8 @@
       "canonical_name": "林睿閎",
       "display_name": "林睿閎",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -624,7 +624,7 @@
       "display_name": "林鈺凱",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -643,8 +643,8 @@
       "canonical_name": "林鍾翔",
       "display_name": "林鍾翔",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -664,7 +664,7 @@
       "display_name": "楊少凱",
       "aliases": [],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -684,7 +684,7 @@
       "display_name": "楊惠宇",
       "aliases": [],
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -704,7 +704,7 @@
       "display_name": "楊育華",
       "aliases": [],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -724,7 +724,7 @@
       "display_name": "江國中",
       "aliases": [],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -749,7 +749,7 @@
         "涂親"
       ],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -790,8 +790,8 @@
       "canonical_name": "王建文",
       "display_name": "王建文",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -811,7 +811,7 @@
       "display_name": "王榮旭",
       "aliases": [],
       "first_seen": "2026-06-24",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -831,7 +831,7 @@
       "display_name": "瑞克",
       "aliases": [],
       "first_seen": "2026-08-20",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -869,7 +869,7 @@
       "display_name": "翁士峻",
       "aliases": [],
       "first_seen": "2026-06-26",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -889,7 +889,7 @@
       "display_name": "艾綸",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -908,8 +908,8 @@
       "canonical_name": "范振鴻",
       "display_name": "范振鴻",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -929,7 +929,7 @@
       "display_name": "莊佳瑩",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -967,7 +967,7 @@
       "display_name": "葉俊敏",
       "aliases": [],
       "first_seen": "2026-07-27",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -987,7 +987,7 @@
       "display_name": "葉子暘",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1007,7 +1007,7 @@
       "display_name": "葉宇乘",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1047,7 +1047,7 @@
       "display_name": "蔡正華",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1087,7 +1087,7 @@
       "display_name": "蕭又銘",
       "aliases": [],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1107,7 +1107,7 @@
       "display_name": "蘇尊龍",
       "aliases": [],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1165,7 +1165,7 @@
         "蘇麗芬特"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1185,8 +1185,8 @@
       "canonical_name": "許毓玲",
       "display_name": "許毓玲",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1206,7 +1206,7 @@
       "display_name": "謝晨彥",
       "aliases": [],
       "first_seen": "2026-07-20",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1226,7 +1226,7 @@
       "display_name": "郭哲榮",
       "aliases": [],
       "first_seen": "2025-08-18",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1245,8 +1245,8 @@
       "canonical_name": "郭憲政",
       "display_name": "郭憲政",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1266,7 +1266,7 @@
       "display_name": "鄭瑞宗",
       "aliases": [],
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-10",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1286,7 +1286,7 @@
       "display_name": "阮惠慈",
       "aliases": [],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1323,8 +1323,8 @@
       "canonical_name": "陳嘉偉",
       "display_name": "陳嘉偉",
       "aliases": [],
-      "first_seen": null,
-      "last_seen": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1364,7 +1364,7 @@
         "陳昆仁親"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1384,7 +1384,7 @@
       "display_name": "陳柏宏",
       "aliases": [],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1404,7 +1404,7 @@
       "display_name": "陳玠儒",
       "aliases": [],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1424,7 +1424,7 @@
       "display_name": "陳韋廷",
       "aliases": [],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [
@@ -1464,7 +1464,7 @@
       "display_name": "黃靖哲",
       "aliases": [],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-11",
       "lifecycle_status": "ACTIVE",
       "source_identifiers": {
         "production_display_labels": [

@@ -415,8 +415,11 @@ function runDryRun(options = {}) {
   const webPayload = JSON.parse(fs.readFileSync(files.web, 'utf8'));
   const teacherRegistry = JSON.parse(fs.readFileSync(files.teacherRegistry, 'utf8'));
   const signalRegistry = JSON.parse(fs.readFileSync(files.signalRegistry, 'utf8'));
-  const end = latestFormalDate(baselineRows);
-  const start = dateAdd(end, -6);
+  // A normal weekly run may occur after the latest formal event date.  Let the
+  // caller provide the source window while keeping the historical replay
+  // default unchanged for existing fixtures and recovery audits.
+  const end = options.end || latestFormalDate(baselineRows);
+  const start = options.start || dateAdd(end, -6);
   const line = adaptLineRows(lineRows, teacherRegistry, start, end);
   const web = adaptWebPayload(webPayload, teacherRegistry, start, end);
   const incomingMap = new Map([...line.normalized, ...web.normalized].map((item) => [item.evidence_id, item]));

@@ -243,9 +243,9 @@ function main() {
   assert.equal(fs.readFileSync(path.join(REPO, 'app.js'), 'utf8'), appBefore, 'production app.js changed during shadow test');
   assert.equal(fs.readFileSync(path.join(REPO, 'teacher-registry.json'), 'utf8'), teacherBefore, 'Teacher Registry mutated');
   assert.equal(fs.readFileSync(path.join(REPO, 'signal-definition-registry.json'), 'utf8'), signalBefore, 'Signal Registry mutated');
-  assert.equal(rows.length, 2322, 'formal canonical baseline changed');
+  assert.equal(rows.length, 2611, 'current canonical candidate changed');
   const evidenceCount = rows.reduce((sum, row) => sum + ((meta(row).evidence_records || []).length || 1), 0);
-  assert.equal(evidenceCount, 2557, 'formal Evidence baseline changed');
+  assert.equal(evidenceCount, 2831, 'current Evidence candidate changed');
 
   const missingYear = rows.filter(isMissingYear).length;
   const unclassified = rows.filter((row) => String(meta(row).signal_definition_id || '').includes('UNCLASSIFIED')).length;
@@ -253,8 +253,8 @@ function main() {
   const ambiguousGroups = new Set(rows.filter((row) => meta(row).review_reason === 'AMBIGUOUS_SAME_DAY_DUPLICATE' || meta(row).review_status === 'REVIEW_REQUIRED').map((row) => meta(row).review_group_id || `${row[0]}|${row[1]}|${row[6]}|${row[8]}|${row[2]}`)).size;
 
   assert.equal(missingYear, 1213, 'missing-year baseline regressed');
-  assert.equal(ambiguousGroups, 52, 'ambiguous group baseline regressed');
-  assert.equal(ambiguousRows, 115, 'ambiguous row baseline regressed');
+  assert.equal(ambiguousGroups, 86, 'review group candidate regressed');
+  assert.equal(ambiguousRows, 159, 'review row candidate regressed');
   assert.equal(unclassified, 3, 'UNCLASSIFIED baseline regressed');
   assert.equal(teachers.merge_reviews.length, 2, 'teacher identity review groups regressed');
   assert.equal(teachers.teachers.length, 73, 'Teacher Registry count regressed');

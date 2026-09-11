@@ -163,12 +163,13 @@ async function main() {
   fs.mkdirSync(OUTPUT, { recursive: true });
   const sourceRows = extractInitialData(fs.readFileSync(APP_JS, "utf8"));
   const events = sourceRows.map(adaptEvent);
+  const evidenceCount = sourceRows.reduce((sum, row) => sum + Math.max(1, ((row[18] || {}).evidence_records || []).length), 0);
   const eventById = new Map(events.map(event => [event.event_id, event]));
   const store = readJson(STORE_FILE);
   const manifest = readJson(MANIFEST_FILE);
   if (!store?.outcomes || !manifest) throw new Error("formal v1.5 store/manifest unavailable");
-  if (store.outcomes.length !== 18576 || manifest.outcome_rows !== 18576) throw new Error("v1.5 Outcome baseline mismatch");
-  if (sourceRows.length !== 2322) throw new Error(`canonical baseline mismatch: ${sourceRows.length}`);
+  if (store.outcomes.length !== manifest.outcome_rows) throw new Error("Outcome store/manifest mismatch");
+  if (sourceRows.length < manifest.canonical_events) throw new Error(`canonical records regressed: ${sourceRows.length} < ${manifest.canonical_events}`);
 
   const checkpoint = readJson(CHECKPOINT_FILE, {});
   const previousRetryQueue = readJson(RETRY_FILE, { items: [] });
@@ -299,12 +300,15 @@ async function main() {
     }
     const updatedStore = {
       ...store,
-      artifact_id: "W01_V16_FORMAL_INCREMENTAL_OUTCOME_STORE_2026-09-07",
-      formal_version: "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
+      artifact_id: `W01_V112_WEEKLY_OUTCOME_STORE_${RUN_DATE}`,
+      formal_version: manifest.formal_version || store.release_label || store.formal_version,
+      release_label: manifest.formal_version || store.release_label || store.formal_version,
       last_incremental_source_commit: accounting.source_commit,
       computed_at: runAt,
       price_cutoff_date: accounting.price_cutoff_after,
       outcome_rows: applied.outcomes.length,
+      canonical_events: sourceRows.length,
+      evidence_rows: evidenceCount,
       semantic_hash: result.semantic_hash_after,
       summary: afterSummary,
       run_health: health,
@@ -315,16 +319,19 @@ async function main() {
     const storeHash = cryptoHash(storeBytes);
     const updatedManifest = {
       ...manifest,
-      artifact_id: "W01_V16_FORMAL_OUTCOME_STORE_2026-09-07",
+      artifact_id: `W01_V112_WEEKLY_OUTCOME_MANIFEST_${RUN_DATE}`,
+      formal_version: manifest.formal_version || store.release_label || store.formal_version,
       formal_candidate_version: "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
       computed_at: runAt,
       last_outcome_update: runAt,
       price_cutoff_date: accounting.price_cutoff_after,
       outcome_rows: applied.outcomes.length,
+      canonical_events: sourceRows.length,
+      evidence_rows: evidenceCount,
       semantic_hash: result.semantic_hash_after,
       by_horizon: afterSummary.by_horizon,
       by_status: afterSummary.by_status,
-      release_contract: "W01 v1.6 — Outcome Incremental Maturity & Update Monitor",
+      release_contract: manifest.formal_version || store.release_label || store.formal_version,
       run_health: health,
       retry_queue_rows: retryItems.length,
       incremental_accounting: accounting,
@@ -337,7 +344,7 @@ async function main() {
       runAt, maturityScanDate: accounting.price_cutoff_after, storeHash, retryItems, health,
     });
     writeJson(CHECKPOINT_FILE, checkpointRecord);
-    writeJson(RETRY_FILE, { artifact_id: "W01_V16_OUTCOME_RETRY_SET_2026-09-07", run_at: runAt, health, items: retryItems });
+    writeJson(RETRY_FILE, { artifact_id: `W01_V112_OUTCOME_RETRY_SET_${RUN_DATE}`, formal_version: updatedStore.formal_version, run_at: runAt, health, items: retryItems });
     result.accounting.actual_outcome_delta = result.accounting.expected_outcome_delta;
     result.accounting.actual_ready_delta = result.accounting.expected_ready_delta;
     writeJson(path.join(OUTPUT, "current_run_apply_0907.json"), result);

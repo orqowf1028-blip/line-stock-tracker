@@ -1,7 +1,7 @@
 {
-  "artifact_id": "W01_V112_UNIFIED_PRODUCTION_VERSION_MANIFEST_2026-09-10",
+  "artifact_id": "W01_V112_WEEKLY_INCREMENTAL_VERSION_MANIFEST_2026-09-12",
   "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
-  "release_date": "2026-09-10",
+  "release_date": "2026-09-12",
   "release_commit_source": "/api/release",
   "versions": {
     "canonical_contract": "W01_V1.4_WEEKLY_RECONCILIATION",
@@ -19,23 +19,23 @@
     "alpha_incremental_performance": "W01_ALPHA_INCREMENTAL_INDEX_V1.11.1"
   },
   "counts": {
-    "canonical": 2322,
-    "evidence": 2557,
-    "outcomes": 18576,
-    "ready": 3362
+    "canonical": 2611,
+    "evidence": 2831,
+    "outcomes": 20536,
+    "ready": 3762
   },
-  "health": "HEALTHY_WITH_KNOWN_LIMITATIONS",
+  "health": "DEGRADED_EXTERNAL_WITH_KNOWN_LIMITATIONS",
   "research_gate": "NOT_READY_SAMPLE",
   "component_hashes": {
-    "outcome_store": "38188e120e8432b70b2c4027ef5e66db396a2a1e3fc7f4e048d78c4c9b1f0e1e",
-    "teacher_registry": "89a65a8dbec7e024371024d9c75c75dc25d6bdbe0a8995bb30141db570c83f34",
+    "outcome_store": "93b4df82b3853230fe5f1484155c9240bef26c4da205c7c274f3baf883e77b15",
+    "teacher_registry": "d8a798db83f49ca9f0a6a8c8f4255a0d2c180af9d0e81c9b7682a8ae7a6a64da",
     "signal_registry": "6a87e2de0d4be5831119d84d69418bb9c0222ca6b61b07d95b36e1b9ad32e436",
     "scorecard_engine": "713879b0c61046164f6d0dc9a66b8e6eb3664df050ab956c59028a57ed3422ed",
     "teacher_alpha_engine": "cf4ce1fdcfe879425a8660d43e46ecf9285c28e7220c107b3f7f309baad28a0d",
     "weekly_intelligence_engine": "cdbf91b2576674174ff52baba8fc87d1c70e8a360024be1c2b1d19629097bd8b",
     "weekly_orchestrator": "a6249bd261b4587e0359b4b9f57fc28fe12cfff3c3acd0b39961b2e5a3796d11",
-    "hierarchy_snapshot": "d7157d98cee77fcf7c3ef0be52a3d68457714e701703f470d967e8fdcb62b62a",
-    "teacher_alpha_snapshot": "1bf99af6ac095b1d560704b2656a8a604f67046da0a2363d874eaee2d55d9447"
+    "hierarchy_snapshot": "f99ae09cf3bc592fc3097a91e92290ac77f7abb86d27eae26455b223bd9f8803",
+    "teacher_alpha_snapshot": "729287491e94ae2dc08a311ebfaf65a01f8531fde76cc9f052e30121882b2ff8"
   },
   "compatibility_status": "PASS",
   "public_ui_exposes_research_ranking": false,

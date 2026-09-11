@@ -70,7 +70,8 @@ function classifyInvalidation(previous, next) {
 function selectWorkset({ events, currentOutcomes, calendarDates, checkpoint = {}, approvedCorrections = [] }) {
   const eventById = new Map(events.map(event => [event.event_id, event]));
   const currentEventIds = new Set(currentOutcomes.map(row => row.event_id));
-  const newEvents = events.filter(event => !currentEventIds.has(event.event_id));
+  const isolatedEventIds = new Set(events.filter(event => event.review_status === "REVIEW_REQUIRED").map(event => event.event_id));
+  const newEvents = events.filter(event => !currentEventIds.has(event.event_id) && !isolatedEventIds.has(event.event_id));
   const newlyMatured = currentOutcomes.filter(row => row.outcome_status === "NOT_MATURED" && isMature(row, calendarDates));
   const retryableMissingPrices = currentOutcomes.filter(row => row.outcome_status === "PRICE_DATA_MISSING");
   const correctionIds = new Set(approvedCorrections);
@@ -85,7 +86,6 @@ function selectWorkset({ events, currentOutcomes, calendarDates, checkpoint = {}
     }
   }
 
-  const isolatedEventIds = new Set(events.filter(event => event.review_status === "REVIEW_REQUIRED").map(event => event.event_id));
   const selectedMap = new Map();
   function add(row, reason) {
     if (isolatedEventIds.has(row.event_id)) return;
