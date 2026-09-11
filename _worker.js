@@ -305,12 +305,12 @@ export default {
         branch: env.CF_PAGES_BRANCH || 'main',
         deployment: env.CF_PAGES_URL || url.origin,
         formalVersion: 'W01 v1.12 — Weekly Intelligence Foundation',
-        canonical: 2322,
-        evidence: 2557,
-        outcomes: 18576,
-        ready: 3362,
+        canonical: 2611,
+        evidence: 2831,
+        outcomes: 20536,
+        ready: 3762,
         outcomeCalculationVersion: 'W01_OUTCOME_V1.0.0-SHADOW',
-        health: 'HEALTHY_WITH_KNOWN_LIMITATIONS',
+        health: 'DEGRADED_EXTERNAL_WITH_KNOWN_LIMITATIONS',
         researchGate: 'NOT_READY_SAMPLE',
       }, { headers: { 'Cache-Control': 'no-store' } });
     }
