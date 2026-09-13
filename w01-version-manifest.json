@@ -1,7 +1,7 @@
 {
-  "artifact_id": "W01_V112_WEEKLY_INCREMENTAL_VERSION_MANIFEST_2026-09-12",
-  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
-  "release_date": "2026-09-12",
+  "artifact_id": "W01_V113_DECISION_UX_VERSION_MANIFEST_2026-09-13",
+  "formal_version": "W01 v1.13 — Decision UX & Research Navigation",
+  "release_date": "2026-09-13",
   "release_commit_source": "/api/release",
   "versions": {
     "canonical_contract": "W01_V1.4_WEEKLY_RECONCILIATION",

@@ -203,6 +203,13 @@ async function tdccHoldings(code) {
 }
 
 async function buildStudy(code, requestedRange) {
+  if (/^00\d{3}[A-Z]?$/.test(code)) {
+    const selectedRange = rangeKey(requestedRange);
+    const date = new Date(); date.setMonth(date.getMonth() - RANGE_MONTHS[selectedRange]);
+    const rows = await finMind('TaiwanStockPrice', code, date.toISOString().slice(0, 10), formatUtcDate(new Date()));
+    const candles = rows.map(row => ({ date: row.date, open: row.open, high: row.max, low: row.min, close: row.close, volume: row.Trading_Volume }));
+    return { code, name: code === '00631L' ? '元大台灣50正2' : code, market: 'ETF', candles, institutions: [], holdings: [], dataSource: 'FinMind', updatedAt: new Date().toISOString() };
+  }
   const selectedRange = rangeKey(requestedRange);
   const { market, name, candles, dataSource, partialHistory } = await getCandles(code, selectedRange);
   if (!candles.length) throw new Error('找不到此代號的日行情');
@@ -304,7 +311,7 @@ export default {
         commit: env.CF_PAGES_COMMIT_SHA || 'unavailable',
         branch: env.CF_PAGES_BRANCH || 'main',
         deployment: env.CF_PAGES_URL || url.origin,
-        formalVersion: 'W01 v1.12 — Weekly Intelligence Foundation',
+        formalVersion: 'W01 v1.13 — Decision UX & Research Navigation',
         canonical: 2611,
         evidence: 2831,
         outcomes: 20536,
@@ -318,10 +325,34 @@ export default {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
       try { return await quotes(request); } catch (error) { return Response.json({ error: String(error?.message || error) }, { status: 502 }); }
     }
+    if (url.pathname === '/api/fundamentals') {
+      if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
+      const code = url.searchParams.get('code');
+      if (!/^\d{4}$/.test(code || '')) return Response.json({ error: 'Invalid instrument' }, { status: 400 });
+      let revenue = [], eps2025 = null, gap = '';
+      const end = formatUtcDate(new Date());
+      const results = await Promise.allSettled([
+        finMind('TaiwanStockMonthRevenue', code, '2023-01-01', end),
+        finMind('TaiwanStockFinancialStatements', code, '2025-01-01', end),
+      ]);
+      if (results[0].status === 'fulfilled') {
+        const all = results[0].value;
+        revenue = all.filter(row => [2024, 2025, 2026].includes(row.revenue_year)).map(row => {
+          const prior = all.find(other => other.revenue_year === row.revenue_year - 1 && other.revenue_month === row.revenue_month);
+          return { year: row.revenue_year, month: row.revenue_month, value: row.revenue / 1e8, yoy: prior?.revenue ? (row.revenue / prior.revenue - 1) * 100 : null };
+        });
+      } else gap = '月營收來源目前不可用';
+      if (results[1].status === 'fulfilled') {
+        const rows = results[1].value.filter(row => row.type === 'EPS' && row.date.startsWith('2025'));
+        if (new Set(rows.map(row => row.date.slice(5, 7))).size === 4) eps2025 = Number(rows.reduce((sum, row) => sum + row.value, 0).toFixed(2));
+        else gap += '；2025A EPS 季資料不完整';
+      } else gap += '；實際 EPS 來源不可用';
+      return Response.json({ revenue, eps2025, gap, updated_at: new Date().toISOString() });
+    }
     if (url.pathname === '/api/stock') {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
       const code = (url.searchParams.get('code') || '').trim();
-      if (!/^\d{4}$/.test(code)) return Response.json({ error: '請提供四碼股票代號' }, { status: 400 });
+      if (!/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(code)) return Response.json({ error: '請提供四碼股票或 ETF 代號' }, { status: 400 });
       const cache = caches.default, key = new Request(url.toString(), request);
       const cached = await cache.match(key);
       if (cached) return cached;
