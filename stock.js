@@ -1,9 +1,8 @@
-function chartPrefs(){try{return JSON.parse(localStorage.getItem('W01ChartPreferencesV1')||'{}')}catch{return {}}}
 const $ = selector => document.querySelector(selector);
 let code = new URLSearchParams(location.search).get('code') || '';
 const NS = 'http://www.w3.org/2000/svg';
 const RANGE_LABELS = { '2m': '近 2 個月', '3m': '近 3 個月', '6m': '近 6 個月', '1y': '近 1 年', '3y': '近 3 年', '5y': '近 5 年' };
-let currentRange = RANGE_LABELS[new URLSearchParams(location.search).get('range')] ? new URLSearchParams(location.search).get('range') : (chartPrefs().range||'2m');
+let currentRange = RANGE_LABELS[new URLSearchParams(location.search).get('range')] ? new URLSearchParams(location.search).get('range') : '2m';
 const TRACKER_SIGNALS = window.LINE_TRACKER_SIGNALS || [];
 const fmt = (value, digits = 2) => Number.isFinite(Number(value)) ? Number(value).toLocaleString('zh-TW', { maximumFractionDigits: digits, minimumFractionDigits: digits }) : '—';
 const finite = value => Number.isFinite(Number(value)) ? Number(value) : null;
@@ -34,7 +33,7 @@ function movingAverage(values, length) {
     return sample.some(value => value === null) ? null : sample.reduce((sum, value) => sum + value, 0) / length;
   });
 }
-function baseActiveSmaSpecs() {
+function activeSmaSpecs() {
   const specs = [
     { length: 5, color: '#ffbd59' },
     { length: 10, color: '#70c8ff' },
@@ -45,7 +44,6 @@ function baseActiveSmaSpecs() {
   if (['3y', '5y'].includes(currentRange)) specs.push({ length: 240, color: '#d7d95c' });
   return specs;
 }
-function activeSmaSpecs(){const prefs=chartPrefs();return baseActiveSmaSpecs().filter(x=>prefs.hidden?.[x.length]!==true).map(x=>({...x,bold:prefs.bold?.[x.length]===true}));}
 function trend(current, previous) {
   const a = finite(current), b = finite(previous);
   if (a === null || b === null) return '—';
@@ -99,7 +97,38 @@ function drawKline(candles, institutions = [], holdings = []) {
   const averages = activeSmaSpecs().map(spec => ({ ...spec, values: movingAverage(closes, spec.length) }));
   const volumeMa5 = movingAverage(volumes, 5), volumeMa10 = movingAverage(volumes, 10);
 
-  // v1.13 UI: suspended unverified retail/main-force decomposition.
+  // A price-by-volume activity proxy. Official data does not expose account
+  // classes at each execution price. Weight daily volume by the latest TDCC
+  // large-holder snapshot at or before that date, then use institutional net
+  // activity as a floor. The remainder is the retail-side proxy.
+  const byDate = new Map(institutions.map(row => [row.date, row])), binCount = 18, binSize = Math.max((rawHigh - rawLow) / binCount, rawHigh * .001);
+  const weeklyHoldings = [...holdings].filter(row => row?.date).sort((a, b) => a.date.localeCompare(b.date));
+  const holdingForDate = date => {
+    let matched = null;
+    for (const snapshot of weeklyHoldings) {
+      if (snapshot.date > date) break;
+      matched = snapshot;
+    }
+    return matched;
+  };
+  const profile = Array.from({ length: binCount }, (_, index) => ({ low: rawLow + index * binSize, retail: 0, main: 0 }));
+  data.forEach(row => {
+    const typical = (Number(row.high) + Number(row.low) + Number(row.close)) / 3, volume = Math.max(Number(row.volume) || 0, 0);
+    const chip = byDate.get(row.date) || {}, institutionalRatio = volume ? Math.min((Math.abs(Number(chip.foreign) || 0) + Math.abs(Number(chip.trust) || 0)) / volume, .95) : 0;
+    const snapshot = holdingForDate(row.date), tdccRatioValue = snapshot ? holdingRatio(snapshot, holdingThresholds.large2, 'above', 'large1000') : null;
+    const tdccRatio = finite(tdccRatioValue) === null ? 0 : clamp(Number(tdccRatioValue) / 100, 0, .95);
+    const main = volume * Math.max(tdccRatio, institutionalRatio);
+    const index = clamp(Math.floor((typical - rawLow) / binSize), 0, binCount - 1);
+    profile[index].main += main; profile[index].retail += Math.max(volume - main, 0);
+  });
+  const profileMax = Math.max(...profile.map(row => row.main + row.retail), 1), profileWidth = 112;
+  profile.forEach(row => {
+    const centerPrice = row.low + binSize / 2, totalWidth = (row.main + row.retail) / profileMax * profileWidth, mainWidth = row.main / profileMax * profileWidth;
+    const barY = y(centerPrice) - Math.max((priceBottom - priceTop) / binCount * .36, 1.3), barHeight = Math.max((priceBottom - priceTop) / binCount * .72, 2);
+    chart.append(svg('rect', { x: plotLeft - totalWidth, y: barY, width: Math.max(totalWidth - mainWidth, 0), height: barHeight, fill: '#a3d8ff', opacity: .23 }));
+    chart.append(svg('rect', { x: plotLeft - mainWidth, y: barY, width: mainWidth, height: barHeight, fill: '#d9a7ff', opacity: .38 }));
+  });
+  chart.append(svg('line', { x1: plotLeft, y1: priceTop, x2: plotLeft, y2: priceBottom, stroke: '#52738b', 'stroke-width': .8, opacity: .8 }));
 
   data.forEach((row, index) => {
     const color = row.close >= row.open ? '#ef4d53' : '#25c878', cx = x(index), openY = y(row.open), closeY = y(row.close);
@@ -110,7 +139,7 @@ function drawKline(candles, institutions = [], holdings = []) {
   });
   averages.forEach(average => {
     const points = average.values.map((value, index) => value === null ? null : `${x(index)},${y(value)}`).filter(Boolean);
-    if (points.length > 1) chart.append(svg('polyline', { points: points.join(' '), fill: 'none', stroke: average.color, 'stroke-width': average.bold?3.4:1.5, 'data-sma-line': average.length }));
+    if (points.length > 1) chart.append(svg('polyline', { points: points.join(' '), fill: 'none', stroke: average.color, 'stroke-width': 1.5 }));
   });
 
   const highestIndex = data.reduce((best, row, index) => Number(row.high) > Number(data[best].high) ? index : best, 0);
@@ -245,7 +274,7 @@ function renderHoldings(holdings) {
 }
 function initHoldingControls() {
   const inputs = { retail: $('#retailInput'), large1: $('#large1Input'), large2: $('#large2Input') };
-  Object.entries(inputs).forEach(([key, input]) => { input.value = holdingThresholds[key]; input.addEventListener('change', () => { holdingThresholds[key] = positive(input.value, holdingThresholds[key]); input.value = holdingThresholds[key]; saveHoldingThresholds(); if (studyData) { renderHoldings(studyData.holdings || []); drawKline(studyData.candles || [], studyData.institutions || [], studyData.holdings || []); text('#profileNote', '單一成交量分布代理：每日總量分配至典型價 (高+低+收)/3；不是逐筆逐價成交，也不是實際帳戶成本。'); } }); });
+  Object.entries(inputs).forEach(([key, input]) => { input.value = holdingThresholds[key]; input.addEventListener('change', () => { holdingThresholds[key] = positive(input.value, holdingThresholds[key]); input.value = holdingThresholds[key]; saveHoldingThresholds(); if (studyData) { renderHoldings(studyData.holdings || []); drawKline(studyData.candles || [], studyData.institutions || [], studyData.holdings || []); text('#profileNote', `籌碼峰為結構代理量：以每週 TDCC「≥${holdingThresholds.large2} 張」持股比率套用到相鄰交易日，並以外資＋投信買賣超占成交量作下限；不是逐筆主力帳戶成本。`); } }); });
 }
 
 function alignDaily(candles, institutions) {
@@ -281,7 +310,7 @@ function render(data) {
   $('#marginMetrics').innerHTML = metricText('融資(張)', marginBalance, marginBalancePrevious) + metricText('差額(張)', marginDelta, marginDeltaPrevious);
   $('#marginRateMetrics').innerHTML = metricText('融資使用率', marginRate, marginRatePrevious, 1, 2, '%');
   const holders = data.holdings || [], holding = holders.at(-1); text('#holderDate', holding ? `最新資料日 ${holding.date}；每根為該週最後營業日快照` : '每週最後營業日'); renderHoldings(holders);
-  text('#profileNote', '單一成交量分布代理：每日總量分配至典型價 (高+低+收)/3；不是逐筆逐價成交，也不是實際帳戶成本。');
+  text('#profileNote', `左側籌碼峰是估算：以 TDCC 大戶2（＞${fmt(holdingThresholds.large2, 0)}張）持股比作每日成交量的大戶權重，再與外資＋投信淨額比率擇高；剩餘量列為散戶代理量。這是持股結構加權的活動代理，不是實際帳戶逐價成本。`);
   $('#loading').hidden = true; $('#dashboard').hidden = false;
 }
 function normalizedSymbol(value) { return String(value || '').trim().toLocaleLowerCase('zh-TW').replace(/[\s（）()]/g, ''); }
@@ -318,7 +347,7 @@ function prepareLoading(targetCode) {
   text('#name', `載入中（${targetCode}）`); text('#market', ''); text('#price', ''); text('#change', ''); text('#quoteMeta', ''); text('#updated', '正在載入官方資料…');
 }
 async function loadStudy(targetCode, pushHistory = false) {
-  if (!/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(targetCode)) return error('請輸入可辨識的四位股票代號。');
+  if (!/^\d{4}$/.test(targetCode)) return error('請輸入可辨識的四位股票代號。');
   code = targetCode; const sequence = ++loadSequence; prepareLoading(code);
   if (pushHistory) { const next = new URL(location.href); next.searchParams.set('code', code); next.searchParams.set('range', currentRange); history.pushState({ code, range: currentRange }, '', next); }
   try {
@@ -342,9 +371,9 @@ function initRangeControls() {
   document.querySelectorAll('[data-range]').forEach(button => button.addEventListener('click', () => {
     const nextRange = button.dataset.range;
     if (!RANGE_LABELS[nextRange] || nextRange === currentRange) return;
-    currentRange = nextRange; const prefs=JSON.parse(localStorage.getItem('W01ChartPreferencesV1')||'{}');prefs.range=currentRange;localStorage.setItem('W01ChartPreferencesV1',JSON.stringify(prefs));setRangeButtons();
+    currentRange = nextRange; setRangeButtons();
     const next = new URL(location.href); next.searchParams.set('range', currentRange); history.replaceState({ code, range: currentRange }, '', next);
-    if (/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(code)) loadStudy(code, false);
+    if (/^\d{4}$/.test(code)) loadStudy(code, false);
   }));
   $('#klineFullscreen').addEventListener('click', () => {
     if (document.fullscreenElement) document.exitFullscreen();
@@ -369,7 +398,7 @@ function initSymbolSearch() {
 }
 function start() {
   initHoldingControls(); initRangeControls(); initSymbolSearch();
-  if (!/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(code)) { error('請在上方輸入股票名稱或四碼股號。'); focusSymbolInput(); return; }
+  if (!/^\d{4}$/.test(code)) { error('請在上方輸入股票名稱或四碼股號。'); focusSymbolInput(); return; }
   loadStudy(code, false);
 }
 start();

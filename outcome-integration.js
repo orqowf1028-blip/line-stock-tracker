@@ -111,7 +111,7 @@
       const link = document.createElement('a');
       const stamp = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }).replaceAll('-', '').slice(4);
       link.href = url;
-      link.download = `LINE_股市同學會_投資追蹤表_${stamp}.xlsx`;
+      link.download = `LINE_股市同學會_PUBLIC_SAFE_投資追蹤表_${stamp}.xlsx`;
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
       const manifest = await loadManifest();

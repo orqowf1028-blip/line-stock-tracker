@@ -1,7 +1,7 @@
 {
-  "artifact_id": "W01_V113_DECISION_UX_VERSION_MANIFEST_2026-09-13",
-  "formal_version": "W01 v1.13 — Decision UX & Research Navigation",
-  "release_date": "2026-09-13",
+  "artifact_id": "W01_V112_WEEKLY_VERSION_MANIFEST_2026-09-19",
+  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
+  "release_date": "2026-09-12",
   "release_commit_source": "/api/release",
   "versions": {
     "canonical_contract": "W01_V1.4_WEEKLY_RECONCILIATION",
@@ -19,23 +19,23 @@
     "alpha_incremental_performance": "W01_ALPHA_INCREMENTAL_INDEX_V1.11.1"
   },
   "counts": {
-    "canonical": 2611,
-    "evidence": 2831,
-    "outcomes": 20536,
-    "ready": 3762
+    "canonical": 2842,
+    "evidence": 3071,
+    "outcomes": 22520,
+    "ready": 4924
   },
   "health": "DEGRADED_EXTERNAL_WITH_KNOWN_LIMITATIONS",
   "research_gate": "NOT_READY_SAMPLE",
   "component_hashes": {
-    "outcome_store": "93b4df82b3853230fe5f1484155c9240bef26c4da205c7c274f3baf883e77b15",
-    "teacher_registry": "d8a798db83f49ca9f0a6a8c8f4255a0d2c180af9d0e81c9b7682a8ae7a6a64da",
-    "signal_registry": "6a87e2de0d4be5831119d84d69418bb9c0222ca6b61b07d95b36e1b9ad32e436",
-    "scorecard_engine": "713879b0c61046164f6d0dc9a66b8e6eb3664df050ab956c59028a57ed3422ed",
+    "outcome_store": "5390c03342d87f4eb3baa4532854fbb9bc75e401bf340672a48fd9c697860a96",
+    "teacher_registry": "7b49c5bfccafa4a673fd0020153fc9531f91ffb38bb8c7549fa2bb9c5f2e4e86",
+    "signal_registry": "03957db6061898d76e4b17166887d47c3ab606c6839ea4f8c1d263098e35dec6",
+    "scorecard_engine": "7c9e38730ea7b02a48a322f02a6feed518ead04140ec90973cb913551fbb014f",
     "teacher_alpha_engine": "cf4ce1fdcfe879425a8660d43e46ecf9285c28e7220c107b3f7f309baad28a0d",
     "weekly_intelligence_engine": "cdbf91b2576674174ff52baba8fc87d1c70e8a360024be1c2b1d19629097bd8b",
     "weekly_orchestrator": "a6249bd261b4587e0359b4b9f57fc28fe12cfff3c3acd0b39961b2e5a3796d11",
-    "hierarchy_snapshot": "f99ae09cf3bc592fc3097a91e92290ac77f7abb86d27eae26455b223bd9f8803",
-    "teacher_alpha_snapshot": "729287491e94ae2dc08a311ebfaf65a01f8531fde76cc9f052e30121882b2ff8"
+    "hierarchy_snapshot": "4231d93715f823700f1bcf8cc8c977b3b9bdcee673acb138f6eddcd5316b6686",
+    "teacher_alpha_snapshot": "edb0ef93526651c0be267e1169d6396cc2869268388faeda37563c2608c9a010"
   },
   "compatibility_status": "PASS",
   "public_ui_exposes_research_ranking": false,
