@@ -330,7 +330,7 @@ async function loadSymbols() {
   return symbolsPromise;
 }
 async function resolveSymbol(value) {
-  const raw = String(value || '').trim(), codeMatch = raw.match(/(?<!\d)(\d{4})(?!\d)/);
+  const raw = String(value || '').trim(), codeMatch = raw.toUpperCase().match(/(?<![0-9A-Z])((?:\d{4}|00\d{3}[A-Z]?))(?![0-9A-Z])/);
   if (codeMatch) return { code: codeMatch[1], name: symbols.find(item => item.code === codeMatch[1])?.name || '' };
   if (!raw) throw new Error('請輸入股票名稱或四碼股號');
   await loadSymbols();
@@ -347,7 +347,7 @@ function prepareLoading(targetCode) {
   text('#name', `載入中（${targetCode}）`); text('#market', ''); text('#price', ''); text('#change', ''); text('#quoteMeta', ''); text('#updated', '正在載入官方資料…');
 }
 async function loadStudy(targetCode, pushHistory = false) {
-  if (!/^\d{4}$/.test(targetCode)) return error('請輸入可辨識的四位股票代號。');
+  if (!/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(targetCode)) return error('請輸入可辨識的股票或 ETF 代號。');
   code = targetCode; const sequence = ++loadSequence; prepareLoading(code);
   if (pushHistory) { const next = new URL(location.href); next.searchParams.set('code', code); next.searchParams.set('range', currentRange); history.pushState({ code, range: currentRange }, '', next); }
   try {
@@ -373,7 +373,7 @@ function initRangeControls() {
     if (!RANGE_LABELS[nextRange] || nextRange === currentRange) return;
     currentRange = nextRange; setRangeButtons();
     const next = new URL(location.href); next.searchParams.set('range', currentRange); history.replaceState({ code, range: currentRange }, '', next);
-    if (/^\d{4}$/.test(code)) loadStudy(code, false);
+    if (/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(code)) loadStudy(code, false);
   }));
   $('#klineFullscreen').addEventListener('click', () => {
     if (document.fullscreenElement) document.exitFullscreen();
@@ -398,7 +398,7 @@ function initSymbolSearch() {
 }
 function start() {
   initHoldingControls(); initRangeControls(); initSymbolSearch();
-  if (!/^\d{4}$/.test(code)) { error('請在上方輸入股票名稱或四碼股號。'); focusSymbolInput(); return; }
+  if (!/^(?:\d{4}|00\d{3}[A-Z]?)$/.test(code)) { error('請在上方輸入股票名稱或股票／ETF 代號。'); focusSymbolInput(); return; }
   loadStudy(code, false);
 }
 start();
