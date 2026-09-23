@@ -314,7 +314,7 @@ export default {
         deployment: env.CF_PAGES_URL || url.origin,
         formalVersion: 'W01 v1.13 — Decision UX & Research Navigation',
         canonical: 2842,
-        evidence: 3071,
+        evidence: 3164,
         outcomes: 22520,
         ready: 4924,
         outcomeCalculationVersion: 'W01_OUTCOME_V1.0.0-SHADOW',
