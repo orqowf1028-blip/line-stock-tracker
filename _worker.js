@@ -378,8 +378,6 @@ export default {
     }
     let pathname;try{pathname=decodeURIComponent(url.pathname)}catch{return new Response('Not found',{status:404})}
     if(!W01_PUBLIC_STATIC_PATHS.has(pathname))return new Response('Not found',{status:404,headers:{'Cache-Control':'no-store'}});
-    let pathname;try{pathname=decodeURIComponent(url.pathname)}catch{return new Response('Not found',{status:404})}
-    if(!W01_PUBLIC_STATIC_PATHS.has(pathname))return new Response('Not found',{status:404,headers:{'Cache-Control':'no-store'}});
     return env.ASSETS.fetch(request);
   },
 };
