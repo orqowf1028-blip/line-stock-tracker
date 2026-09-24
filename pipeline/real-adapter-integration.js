@@ -12,6 +12,7 @@ const {
   resultHash,
   stableStringify,
 } = require('./weekly-reconciliation');
+const { partitionWriteGate } = require('./weekly-write-gate-partition');
 
 const REPO = path.resolve(__dirname, '..');
 const WORK = path.resolve(REPO, '..');
@@ -429,9 +430,12 @@ function runDryRun(options = {}) {
   const second = classifyCurrentWeek({ baseline, incoming, teacherRegistry, signalRegistry });
   const deterministic = sha256(stableStringify(classified)) === sha256(stableStringify(second));
   const secondRun = classifyCurrentWeek({ baseline, incoming, teacherRegistry, signalRegistry });
-  const allValidation = Object.values(classified.validation).every(Boolean);
+  const partition = partitionWriteGate({ dryRun: { candidates: classified.delta_rows }, teacherRegistry });
+  const cleanValidation = Object.entries(classified.validation)
+    .filter(([name]) => name !== 'teacher_registry_references_valid')
+    .every(([, value]) => Boolean(value));
   const exactDeltaKnown = Number.isInteger(classified.proposed.canonical_delta) && Number.isInteger(classified.proposed.evidence_delta);
-  const writeGate = allValidation && deterministic && exactDeltaKnown && classified.counts.SOURCE_CONFLICT === 0 && classified.counts.REVIEW_REQUIRED === 0;
+  const writeGate = cleanValidation && deterministic && exactDeltaKnown && partition.write_gate === 'PASS';
   const artifact = {
     artifact_id: 'W01_V14_REAL_ADAPTER_DRY_RUN_2026-09-06',
     generated_at: new Date().toISOString(),
@@ -488,13 +492,19 @@ function runDryRun(options = {}) {
       first_hash: sha256(stableStringify(classified)),
       second_hash: sha256(stableStringify(second)),
       validation: classified.validation,
+      partition: {
+        counts: partition.counts,
+        validation: partition.validation,
+        approved_clean_hash: partition.approved_clean_hash,
+        review_required_hash: partition.review_required_hash,
+      },
       write_gate: writeGate ? 'PASS' : 'NOT_REACHED',
     },
     candidates: classified.delta_rows,
     normalized_evidence: incoming.map(sanitizeEvidence),
     checkpoints: {
       adapter_map: 'PASS',
-      real_source_dry_run: allValidation && deterministic ? 'PASS' : 'FAIL',
+      real_source_dry_run: cleanValidation && deterministic && partition.write_gate === 'PASS' ? 'PASS' : 'FAIL',
       pre_write: writeGate ? 'PASS_ZERO_DELTA' : 'NOT_REACHED',
       canonical_write: 'NOT_PERFORMED',
       deployment: 'NOT_PERFORMED',

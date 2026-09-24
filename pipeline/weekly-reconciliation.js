@@ -445,6 +445,7 @@ module.exports = {
   STATES,
   UNKNOWN_TEACHER_ID,
   canonicalAction,
+  eventIdFor,
   normalizeEvidence,
   matchEvidence,
   reconcileEvidence,
