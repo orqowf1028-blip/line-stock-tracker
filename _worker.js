@@ -377,6 +377,7 @@ export default {
       } catch (error) { return Response.json({ error: String(error?.message || error) }, { status: 502 }); }
     }
     let pathname;try{pathname=decodeURIComponent(url.pathname)}catch{return new Response('Not found',{status:404})}
+    if(pathname==='/research-view.js'||pathname==='/w01-approved-research-view.json')return env.ASSETS.fetch(request);
     if(!W01_PUBLIC_STATIC_PATHS.has(pathname))return new Response('Not found',{status:404,headers:{'Cache-Control':'no-store'}});
     return env.ASSETS.fetch(request);
   },

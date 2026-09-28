@@ -1,9 +1,9 @@
 {
   "priority": "P1",
   "work": "W01",
-  "formal_version": "W01 v1.12 — Weekly Intelligence Foundation",
+  "formal_version": "W01 v1.13 — Decision UX & Research Navigation",
   "formal_commit_source": "/api/release",
-  "current_status": "Production GO pending deployment verification",
+  "current_status": "Single Research Source release pending deployment verification",
   "working_change": "None / next candidate not started",
   "status_next": "Maintenance + Friday Live Weekly Cycle #1",
   "access": "Direct / GitHub main",
@@ -13,6 +13,15 @@
     "unsupported_special_instrument_outcomes": 241,
     "ticker_5371_review_rows": 1
   },
-  "last_verified": "2026-09-10",
+  "last_verified": "2026-09-28",
+  "research_view": {
+    "contract": "W01_APPROVED_RESEARCH_VIEW",
+    "website": "Primary Research Workspace",
+    "xlsx": "Offline Mirror",
+    "access_layer": "SOFT_GATE_ONLY",
+    "soft_download_code": "1028",
+    "soft_gate_is_security_boundary": false,
+    "anonymous_raw_evidence_publication": "CEO_EXPLICITLY_AUTHORIZED_2026-09-28"
+  },
   "contains_w08_private_data": false
 }

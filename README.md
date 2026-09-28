@@ -1,8 +1,8 @@
 # 取得公開網址：照這 4 步做
 
-這一包可直接部署到 Cloudflare。首頁開啟時會要求閱讀密碼；預設密碼為 `8888`。登入 Email 只用於跨裝置同步「我的註記」。
+這一包可直接部署到 Cloudflare。Website 是主要研究工作台，瀏覽器即時產生的 XLSX 是同一份 `W01_APPROVED_RESEARCH_VIEW` 的離線鏡像。登入 Email 只用於跨裝置同步「我的註記」。
 
-> 注意：這是寫在靜態 HTML 裡的簡易門鎖，密碼可被檢視原始碼的人找到；若要真正限制特定成員，請改用 Cloudflare Access。
+> 存取模型：網站為匿名公開；XLSX 下載碼 `1028` 只是避免誤觸的 soft gate，不是安全邊界。CEO 已於 2026-09-28 明確接受 W01 研究 Evidence 對匿名使用者公開。憑證、秘密、私人 tunnel URL 與 W08 資料仍禁止進入公開成品。
 
 ## 0725 版本重點
 
@@ -52,4 +52,4 @@ window.LINE_TRACKER_CONFIG = {
 
 ## 公開範圍
 
-表格訊號、價格與市場摘要全部公開；不要放不適合公開的內容。註記存放在 Supabase，資料庫規則限制每一個登入帳號只能讀寫自己的註記。
+表格訊號、價格、市場摘要與 W01 研究 Evidence 公開；Website 與 XLSX 必須維持相同的執行狀態、推薦原因、Evidence 與 lineage。不得公開任何憑證、秘密、私人 tunnel URL 或 W08 資料。註記存放在 Supabase，資料庫規則限制每一個登入帳號只能讀寫自己的註記。
