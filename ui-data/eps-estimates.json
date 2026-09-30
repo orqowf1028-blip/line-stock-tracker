@@ -1,0 +1,76 @@
+{
+  "schema_version": "W01_EPS_RESEARCH_VIEW_V2_CANDIDATE",
+  "generated_at": "2026-09-30T00:00:00+08:00",
+  "scope": "LOCAL_STOCK_PAGE_CANDIDATE_ONLY",
+  "methodology": {
+    "2026E_yoy": "(eps_2026_estimate - eps_2025_actual) / abs(eps_2025_actual)",
+    "2027E_yoy": "(eps_2027_estimate - eps_2026_estimate) / abs(eps_2026_estimate)",
+    "zero_denominator": "N/A",
+    "grade_A": "Issuer filing, official guidance or official investor material",
+    "grade_B": "Traceable public market-data provider",
+    "grade_C": "Single public broker estimate with attributable publication",
+    "grade_D": "Public portal/proxy fallback; never labelled consensus"
+  },
+  "by_ticker": {
+    "2330": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 66.25, "value_type": "actual", "source_name": "MarketScreener annual financials", "source_grade": "B", "as_of": "2026-01-15", "observed_at": "2026-09-30", "source_url": "https://au.marketscreener.com/quote/stock/TSMC-TAIWAN-SEMICONDUCTOR-6492349/finances/"},
+        "2026E": {"value": 107.6, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-18", "observed_at": "2026-09-30", "source_url": "https://au.marketscreener.com/quote/stock/TSMC-TAIWAN-SEMICONDUCTOR-6492349/finances/", "consensus_claim": false},
+        "2027E": {"value": 141.8, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-18", "observed_at": "2026-09-30", "source_url": "https://au.marketscreener.com/quote/stock/TSMC-TAIWAN-SEMICONDUCTOR-6492349/finances/", "consensus_claim": false}
+      }
+    },
+    "2454": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 66.16, "value_type": "actual", "source_name": "MarketScreener annual financials", "source_grade": "B", "as_of": "2026-02-05", "observed_at": "2026-09-30", "source_url": "https://ca.marketscreener.com/quote/stock/MEDIATEK-INC-6495333/finances/"},
+        "2026E": {"value": 68.31, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-24", "observed_at": "2026-09-30", "source_url": "https://ca.marketscreener.com/quote/stock/MEDIATEK-INC-6495333/finances/", "consensus_claim": false},
+        "2027E": {"value": 145.5, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-24", "observed_at": "2026-09-30", "source_url": "https://ca.marketscreener.com/quote/stock/MEDIATEK-INC-6495333/finances/", "consensus_claim": false}
+      }
+    },
+    "3665": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 46.33, "value_type": "actual", "source_name": "MarketScreener annual financials", "source_grade": "B", "as_of": "2026-03-13", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/BIZLINK-HOLDING-INC-13491448/finances/"},
+        "2026E": {"value": 68.03, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-29", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/BIZLINK-HOLDING-INC-13491448/finances/", "consensus_claim": false},
+        "2027E": {"value": 117.0, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-29", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/BIZLINK-HOLDING-INC-13491448/finances/", "consensus_claim": false}
+      }
+    },
+    "4971": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 1.65, "value_type": "actual", "source_name": "ToAlpha / MOPS annual financials", "source_grade": "B", "as_of": "2026-03-31", "observed_at": "2026-09-30", "source_url": "https://toalpha.tw/stock/4971/statements"},
+        "2026E": {"value": 7.09, "value_type": "estimate", "source_name": "ToAlpha public estimate (2 analysts)", "source_grade": "B", "as_of": "2026-09-09", "observed_at": "2026-09-30", "source_url": "https://toalpha.tw/stock/4971/eps", "consensus_claim": true, "source_count": 2},
+        "2027E": {"value": 11.70, "value_type": "estimate", "source_name": "ToAlpha public estimate (2 analysts)", "source_grade": "B", "as_of": "2026-09-09", "observed_at": "2026-09-30", "source_url": "https://toalpha.tw/stock/4971/eps", "consensus_claim": true, "source_count": 2}
+      }
+    },
+    "1303": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 0.57, "value_type": "actual", "source_name": "MarketScreener annual financials", "source_grade": "B", "as_of": "2026-03-11", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PLASTICS-CORPORATI-6491613/finances/"},
+        "2026E": {"value": 13.64, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-29", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PLASTICS-CORPORATI-6491613/finances/", "consensus_claim": false},
+        "2027E": {"value": 17.73, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-29", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PLASTICS-CORPORATI-6491613/finances/", "consensus_claim": false}
+      }
+    },
+    "8046": {
+      "security_type": "EQUITY",
+      "fiscal_year_end": "12-31",
+      "values": {
+        "2025A": {"value": 3.01, "value_type": "actual", "source_name": "MarketScreener annual financials", "source_grade": "B", "as_of": "2026-02-24", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PRINTED-CIRCUIT-BO-6498761/finances/"},
+        "2026E": {"value": 18.19, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-24", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PRINTED-CIRCUIT-BO-6498761/finances/", "consensus_claim": false},
+        "2027E": {"value": 45.81, "value_type": "estimate", "source_name": "MarketScreener provider estimate", "source_grade": "B", "as_of": "2026-09-24", "observed_at": "2026-09-30", "source_url": "https://www.marketscreener.com/quote/stock/NAN-YA-PRINTED-CIRCUIT-BO-6498761/finances/", "consensus_claim": false}
+      }
+    },
+    "00631L": {
+      "security_type": "LEVERAGED_ETF",
+      "display_name": "元大台灣50正2",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "ETF／槓桿 ETF 沒有單一發行公司的每股盈餘與公司本益比。"
+    }
+  }
+}
